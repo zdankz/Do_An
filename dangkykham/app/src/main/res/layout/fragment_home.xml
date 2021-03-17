@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:scrollbars="vertical"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".frag.home">
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <ImageView
+               android:layout_width="match_parent"
+               android:paddingTop="15dp"
+               android:src="@drawable/banner"
+               android:id="@+id/baner"
+               android:layout_height="150dp"/>
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:paddingLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nha khoa Nha Trang Uy Tín "
+                            android:textSize="17dp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                       android:layout_width="match_parent"
+                        android:paddingTop="10dp"
+                        android:orientation="horizontal"
+                       android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="160dp"
+                            android:textStyle="italic"
+                            android:textColor="#9C27B0"
+                            android:textSize="14sp"
+                            android:paddingLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nha khoa Việt Hàn Nha Trang được biết đến là nha khoa uy tín hàng đầu tại tỉnh Khánh Hòa, Việt Nam. Với đội ngũ là bác sĩ, chuyên gia được rèn luyện tại các trường đại học danh tiếng trong và ngoài nước. Chúng tôi tự hào khi là một trong số rất ít phòng khám nha khoa thực hiện được toàn bộ các thủ thuật khó và đòi hỏi những tiêu chuẩn đánh giá khắt khe nhất của Thế Giới."/>
+                   <ImageView
+                       android:paddingTop="5dp"
+                       android:layout_width="200dp"
+
+                       android:layout_gravity="right"
+                       android:src="@drawable/bs"
+                       android:layout_height="200dp"/>
+                    </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:orientation="vertical"
+                       android:paddingTop="10dp"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:paddingLeft="10dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Sứ Mệnh Và Tầm Nhìn"
+                           android:textSize="17dp"
+                           android:textStyle="bold"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_marginRight="10dp"
+                           android:textStyle="italic"
+                           android:textColor="#9C27B0"
+                           android:textSize="14sp"
+                           android:paddingHorizontal="10dp"
+                           android:layout_height="wrap_content"
+                           android:text="Giúp bạn sở hữu một nụ cười khỏe mạnh và thẩm mỹ hoàn hảo là sứ mệnh mà đội ngũ Việt Hàn theo đuổi. Vì chúng tôi thấu hiểu, nụ cười đóng vai trò vô cùng quan trọng với tương lai và thành công của mỗi người. Sự ghé thăm của bạn và ra về với nụ cười hài lòng, rạng rỡ là thành công của chúng tôi."/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:textSize="17dp"
+                           android:paddingHorizontal="10dp"
+                           android:textStyle="bold"
+                           android:paddingTop="10dp"
+
+                           android:layout_height="wrap_content"
+                           android:text="Nỗ Lực Vì Cộng Đồng"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:textStyle="italic"
+                           android:textColor="#9C27B0"
+                           android:paddingHorizontal="10dp"
+                           android:textSize="14sp"
+                           android:layout_height="match_parent"
+                           android:text="Giai đoạn 2020 – 2021, thực sự là thách thức lớn với toàn thể đội ngũ Nha khoa Việt Hàn, khi vừa cần tối ưu chi phí cho khách hàng, vừa nỗ lực tái đầu tư thương hiệu. Cải tiến dịch vụ khách hàng, xây dựng và nâng cấp trang thiết bị tối tân. Và điều tự hào nhất, là yếu tố con người luôn được đầu tư kĩ lưỡng. Và trong hành trình thực hiện sứ mệnh ấy, chúng tôi thấu hiểu rằng, chính bạn đã luôn nỗ lực hết sức để gìn giữ và chăm sóc sức khỏe răng miệng của mình. Việt Hàn xin được đồng hành, góp phần mang đến động lực mới, trải nghiệm mới, nụ cười mới đến với bạn."
+                           />
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:textSize="17dp"
+                           android:paddingHorizontal="10dp"
+                           android:textStyle="bold"
+                           android:paddingTop="10dp"
+
+                           android:layout_height="wrap_content"
+                           android:text="Cam Kết Và Giá Trị"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:textStyle="italic"
+                           android:textColor="#9C27B0"
+                           android:paddingHorizontal="10dp"
+                           android:textSize="14sp"
+                           android:layout_height="match_parent"
+                           android:text="Từ thời điểm khởi đầu, Nha khoa Việt Hàn đã khẳng định cam kết mang lại những giá trị vượt trội về Chất lượng điều trị và khác biệt về Dịch vụ khách hàng. Bí quyết mang đến Uy tín của Việt Hàn ngày hôm nay, là luôn tập trung lắng nghe phản hồi từ khách hàng, đối tác để đưa ra các điều chỉnh sớm và hiệu quả nhất."
+                           />
+
+                   </LinearLayout>
+               </LinearLayout>
+
+           </ScrollView>
+
+       </LinearLayout>
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_gravity="center_horizontal"
+
+        android:layout_height="match_parent"
+        android:textSize="30dp"
+        android:text="" />
+
+</FrameLayout>

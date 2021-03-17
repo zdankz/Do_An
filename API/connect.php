@@ -4,7 +4,7 @@
     // $ketnoi['username'] = 'root'; //Tên sử dụng Database
     // $ketnoi['password'] = '';//Mật khẩu của tên sử dụng Database
     
-    $connect = mysqli_connect("localhost", "root", "", "nhkhoaver2");
+    $connect = mysqli_connect("localhost", "root", "", "dentalapp");
 	mysqli_query($connect, "SET NAMES 'utf8'");
 
 	

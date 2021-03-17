@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/rlRoot"
+    android:background="@drawable/item_vande_bg"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginTop="2dp"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/ivUserAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <LinearLayout
+        android:layout_toRightOf="@+id/ivUserAvatar"
+        android:layout_width="match_parent"
+        android:id="@+id/ccn"
+
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/S_NAME"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent"
+            android:text="Van de"
+            android:textStyle="normal"
+            android:textColor="#DC2525"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="100dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentRight="true">-->
+<!--        <Button-->
+<!--            android:layout_width="80dp"-->
+<!--            android:textStyle="italic"-->
+<!--            android:textSize="15sp"-->
+<!--            android:text="Xem"-->
+<!--            android:layout_height="40dp"/>-->
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frag_book"
+    tools:context=".frag.booking">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/bannerbookng"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Bạn đang có nhu cầu về..."/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="170dp"
+                android:layout_marginRight="5dp"
+                android:background="#FF9800"
+                android:id="@+id/thammy"
+                android:layout_height="170dp"/>
+            <ImageButton
+                android:layout_width="170dp"
+                android:id="@+id/benhly"
+                android:background="#03A9F4"
+                android:layout_marginLeft="5dp"
+                android:layout_height="170dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sales"                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="hello_blank_fragment_booking" />-->
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:id="@+id/tssss"/>-->
+
+</FrameLayout>

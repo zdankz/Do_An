@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:background="#E1FFFFFF"
+    android:layout_height="match_parent"
+    tools:context=".V.register">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:paddingHorizontal="5dp"
+        android:id="@+id/head"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_height="40dp">
+        <ImageButton
+            android:layout_width="40dp"
+            android:background="#fff"
+            android:src="@drawable/ic_backkk"
+            android:layout_height="40dp"
+            android:id="@+id/click_register"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="Vui lòng điền đầy đủ thông tin"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_below="@+id/head"
+        android:layout_marginHorizontal="5dp"
+        android:id="@+id/ban"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/ban"
+        android:id="@+id/content"
+        android:paddingHorizontal="10dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/input_ten"
+            android:hint="Họ và Tên"
+            android:background="#EDF3CB"
+            android:layout_height="40dp">
+            <EditText
+                android:layout_width="match_parent"
+
+                android:textStyle="italic"
+                android:id="@+id/edt_hoten"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:hint="Ngày tháng năm sinh"
+            android:layout_width="match_parent"
+            android:background="#EDF3CB"
+            android:id="@+id/input_ntnsinh"
+            android:layout_height="40dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:textStyle="italic"
+                android:inputType="date"
+                android:id="@+id/edt_ntnsinh"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:hint="Số điện thoại"
+            android:id="@+id/input_sdt"
+            android:layout_marginTop="10dp"
+            android:background="#EDF3CB"
+            android:layout_height="40dp">
+            <EditText
+                android:layout_width="match_parent"
+
+                android:textStyle="italic"
+                android:id="@+id/edt_sdt"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:layout_height="wrap_content"
+                android:text="Giới Tính"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:id="@+id/input_gioitinh"
+            android:layout_height="40dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:id="@+id/nu"
+                android:text="Nữ"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:text="Nam"
+                android:id="@+id/nam"/>
+
+        </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:layout_height="wrap_content"
+            android:text="Thời gian đặt lịch"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/set_dta"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="80dp"
+                android:hint="Ngày"
+                android:background="#EDF3CB"
+                android:layout_height="40dp"
+                android:id="@+id/input_ngay">
+
+                <EditText
+                    android:id="@+id/edt_ngay"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="80dp"
+                android:hint="Tháng"
+                android:background="#EDF3CB"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="40dp"
+                android:id="@+id/input_thang">
+
+                <EditText
+                    android:id="@+id/edt_thang"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="80dp"
+                android:hint="Năm"
+                android:background="#EDF3CB"
+                android:layout_height="40dp"
+                android:id="@+id/input_nam">
+
+                <EditText
+                    android:id="@+id/edt_nam"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="80dp"
+                android:background="#EDF3CB"
+                android:hint="Giờ"
+                android:layout_height="40dp"
+                >
+                <EditText
+                    android:layout_width="100dp"
+                    android:inputType="number"
+                    android:id="@+id/edt_gio"
+                    android:layout_height="40dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="80dp"
+                android:background="#EDF3CB"
+                android:hint="Phút"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp">
+                <EditText
+                    android:layout_width="100dp"
+                    android:inputType="number"
+
+                    android:id="@+id/edt_phut"
+                    android:layout_height="40dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:paddingTop="15dp"
+            android:layout_marginHorizontal="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/loadvadetubooking"
+            android:enabled="false"
+            android:textSize="15sp"
+            android:text="Đây là loại bênh mà bạn đang gặp "/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="-1dp"
+            android:paddingHorizontal="20dp"
+            android:id="@+id/book_now"
+            android:text="Booking NoW"
+            android:textStyle="bold"
+            android:layout_height="50dp"
+            android:background="#03A9F4"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

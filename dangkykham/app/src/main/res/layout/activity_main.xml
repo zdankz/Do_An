@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/fl_ok"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/aaaaa">
+            <Button
+                android:layout_width="match_parent"
+                android:text="Chọn vấn đề bạn mắc phải"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/nav2"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                app:menu="@menu/nav_frag"/>-->
+<!--        </RelativeLayout>-->
+
+<!--        <ImageButton-->
+<!--            android:layout_width="40dp"-->
+<!--            android:paddingTop="2dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:id="@+id/back_loadvd"-->
+<!--            android:src="@drawable/ic_home"-->
+<!--            android:background="#ffffff"-->
+<!--            />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+
+<!--        android:paddingHorizontal="10dp"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="Chọn dịch vụ bạn muốn..."-->
+<!--        android:paddingVertical="10dp"/>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+
+        android:layout_below="@+id/aaaaa"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rvAmUser"/>
+
+
+</RelativeLayout>
