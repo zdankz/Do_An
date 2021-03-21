@@ -21,7 +21,7 @@
         android:textStyle="bold"
         android:textSize="35sp"
         android:fontFamily="sans-serif"
-        android:text="Welcome to VietHan Dnental" />
+        android:text="Welcome to VietHan Dental" />
 
 
      <LinearLayout

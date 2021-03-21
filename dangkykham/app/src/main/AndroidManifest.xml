@@ -10,7 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dangkykham">
         <activity android:name=".V.TY"></activity>
-        <activity android:name=".V.register" />
+        <activity android:name=".V.register" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+
+        </activity>
         <activity android:name=".all">
 
             <!-- <intent-filter> -->

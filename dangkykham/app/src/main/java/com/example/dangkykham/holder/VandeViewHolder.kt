@@ -26,7 +26,7 @@ class VandeViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         // get ID cho IMage get về
         val tenanh: String = vande.img
 //        Glide.with(rlRoot.context).load(tenanh).into(ivUserAvata)
-        Picasso.with(rlRoot.context).load(tenanh).into(ivUserAvata)
+//        Picasso.with(rlRoot.context).load(tenanh).into(ivUserAvata)
 
         tvUsername.text = vande.tenvande
 
@@ -47,6 +47,7 @@ class VandeViewHolder(v: View) : RecyclerView.ViewHolder(v) {
             i.putExtra("name",namevande)
             i.putExtra("mota",motavande2)
                 i.putExtra("anh",img1)
+                i.putExtra("idvande",vande.idvande)
             rlRoot.context.startActivity(i)
             Toast.makeText(
                 rlRoot.context,

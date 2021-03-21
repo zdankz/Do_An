@@ -16,12 +16,14 @@ class detail_vande : AppCompatActivity() {
         var ten : String? =  i.getStringExtra("name")
         var mt : String? = i.getStringExtra("mota")
         var anh :String? = i.getStringExtra("anh")
+        var idvande : String? = i.getStringExtra("idvande")
         gettenvande.text = ten.toString()
         getmota.text = mt.toString()
-        Glide.with(this).load(anh).into(igm_load)
+//        Glide.with(this).load(anh).into(igm_load)
         book.setOnClickListener {
             val i = Intent(this,register::class.java)
             i.putExtra("tenbenh",ten)
+            i.putExtra("idvande",idvande)
             startActivity(i)
 
         }

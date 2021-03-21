@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"/>
     <LinearLayout
-        android:paddingTop="5dp"
+        android:paddingTop="0dp"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_below="@+id/ban"
@@ -47,30 +47,66 @@
             android:id="@+id/input_ten"
             android:hint="Họ và Tên"
             android:background="#EDF3CB"
-            android:layout_height="40dp">
+            android:layout_height="55dp">
             <EditText
                 android:layout_width="match_parent"
-
                 android:textStyle="italic"
                 android:id="@+id/edt_hoten"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputLayout
             android:layout_marginTop="10dp"
-            android:hint="Ngày tháng năm sinh"
-            android:layout_width="match_parent"
+            android:hint="Ngày sinh"
+            android:layout_width="120dp"
             android:background="#EDF3CB"
             android:id="@+id/input_ntnsinh"
-            android:layout_height="40dp">
+            android:layout_height="55dp">
             <EditText
                 android:layout_width="match_parent"
                 android:textStyle="italic"
-                android:inputType="date"
-                android:id="@+id/edt_ntnsinh"
+                android:maxLength="2"
+                android:inputType="number"
+                android:id="@+id/edt_ngaysinh"
                 android:layout_height="wrap_content"/>
-
         </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="Tháng sinh"
+
+                android:layout_width="120dp"
+                android:background="#EDF3CB"
+                android:id="@+id/input_thangsinh"
+                android:layout_height="55dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:textStyle="italic"
+                    android:maxLength="2"
+                    android:inputType="number"
+                    android:id="@+id/edt_thangsinh"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="Năm sinh"
+                android:layout_width="match_parent"
+                android:background="#EDF3CB"
+                android:id="@+id/input_namsinh"
+                android:layout_height="55dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:textStyle="italic"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:id="@+id/edt_namsinh"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -78,10 +114,10 @@
             android:id="@+id/input_sdt"
             android:layout_marginTop="10dp"
             android:background="#EDF3CB"
-            android:layout_height="40dp">
+            android:layout_height="55dp">
             <EditText
                 android:layout_width="match_parent"
-
+                android:maxLength="11"
                 android:textStyle="italic"
                 android:id="@+id/edt_sdt"
                 android:inputType="number"
@@ -100,12 +136,12 @@
             android:layout_height="40dp">
             <RadioButton
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/nu"
                 android:text="Nữ"/>
             <RadioButton
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="Nam"
                 android:id="@+id/nam"/>
@@ -126,14 +162,15 @@
                 android:layout_width="80dp"
                 android:hint="Ngày"
                 android:background="#EDF3CB"
-                android:layout_height="40dp"
+                android:layout_height="55dp"
                 android:id="@+id/input_ngay">
 
                 <EditText
                     android:id="@+id/edt_ngay"
-
+                    android:maxLength="2"
+                    android:inputType="number"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp" />
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -141,28 +178,30 @@
                 android:hint="Tháng"
                 android:background="#EDF3CB"
                 android:layout_marginHorizontal="10dp"
-                android:layout_height="40dp"
+                android:layout_height="55dp"
                 android:id="@+id/input_thang">
 
                 <EditText
                     android:id="@+id/edt_thang"
-
+                    android:maxLength="2"
+                    android:inputType="number"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp" />
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="80dp"
                 android:hint="Năm"
                 android:background="#EDF3CB"
-                android:layout_height="40dp"
+                android:layout_height="55dp"
                 android:id="@+id/input_nam">
 
                 <EditText
                     android:id="@+id/edt_nam"
-
+                    android:maxLength="4"
+                    android:inputType="number"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp" />
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -176,26 +215,26 @@
                 android:layout_width="80dp"
                 android:background="#EDF3CB"
                 android:hint="Giờ"
-                android:layout_height="40dp"
-                >
+                android:layout_height="55dp">
                 <EditText
                     android:layout_width="100dp"
                     android:inputType="number"
                     android:id="@+id/edt_gio"
-                    android:layout_height="40dp"/>
+                    android:maxLength="2"
+                    android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="80dp"
                 android:background="#EDF3CB"
                 android:hint="Phút"
-                android:layout_height="40dp"
+                android:layout_height="55dp"
                 android:layout_marginLeft="10dp">
                 <EditText
                     android:layout_width="100dp"
                     android:inputType="number"
-
+                    android:maxLength="2"
                     android:id="@+id/edt_phut"
-                    android:layout_height="40dp"/>
+                    android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 

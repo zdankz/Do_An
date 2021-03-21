@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val i = intent
         val URL: String? =     i.getStringExtra("nhucau")
-        var URL_GET : String = "http://192.168.1.81:80/Do_An/API/api_nhucau.php?key_word="
+        var URL_GET : String = "http://192.168.0.105:80/Do_An/API/api_nhucau.php?key_word="
         URL_GET = URL_GET.plus(URL)
         clearListVideo()
         Getdata().execute(URL_GET)
@@ -66,18 +66,19 @@ class MainActivity : AppCompatActivity() {
             var tenvd : String? =""
             var motavd :String?= ""
             var anh: String? = ""
+            var id: String? = ""
             var jsonArray: JSONArray = JSONArray(result)
             for (vd in 0..jsonArray.length() - 1) {
                 var objectVD: JSONObject = jsonArray.getJSONObject(vd)
 //                idd= objectVD.getString("ID")
 //                namee = objectVD.getString("song")
 //                url_s = objectVD.getString("songkey")
-                val id_vd : String = objectVD.getString("id_vande")
+                id = objectVD.getString("id_vande")
                 tenvd = objectVD.getString("tenvande")
                 motavd = objectVD.getString("mota")
                 anh = objectVD.getString("ing")
 
-                vandes.add(Vande(id_vd,tenvd,anh,motavd))
+                vandes.add(Vande(id,tenvd,anh,motavd))
                 //listview.Name.text = name
                 //mangbaihat.add(id+"\n"+name+"")
             }
