@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#7B1FA2"
+    android:id="@+id/rlRoot_VanDe_NhaSi"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginTop="2dp">
+    <ImageView
+        android:id="@+id/ivUserAvatar_Vande_NhaSi"
+        android:layout_width="70dp"
+        android:background="#ffffff"
+        android:layout_margin="3dp"
+        android:layout_height="70dp"/>
+    <LinearLayout
+        android:layout_toRightOf="@+id/ivUserAvatar_Vande_NhaSi"
+        android:layout_width="match_parent"
+        android:id="@+id/ccn"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/S_NAME_Vande_NhaSi"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent"
+            android:text="Van de"
+            android:textStyle="normal"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/S_MOTA_VanDe_nhaSi"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent"
+            android:text="Van de"
+            android:textStyle="normal"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

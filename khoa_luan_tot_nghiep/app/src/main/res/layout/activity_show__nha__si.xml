@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.NhaSi.Show_Nha_Si">
+    <LinearLayout
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:id="@+id/loc_show_nhasi"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_trinh_do"
+            android:text="Lọc theo trình độ tay nghề"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:id="@+id/chosse_nhom"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+
+            android:id="@+id/input_vande"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+
+                android:textColor="#00796B"
+                android:layout_height="wrap_content"
+                android:text="Thẩm Mỹ"
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/thammy_nhasi"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:textColor="#00796B"
+                android:id="@+id/benhly_nhasi"
+                android:layout_height="wrap_content"
+                android:text="Bệnh Lý"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/loc_show_nhasi"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvAmUser_Nha_Si"/>
+
+
+</RelativeLayout>

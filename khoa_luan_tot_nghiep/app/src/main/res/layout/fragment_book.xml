@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/book_frag"
+    android:layout_height="match_parent"
+    tools:context=".Frag.Book">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_margin="3dp"
+        android:layout_height="wrap_content"
+        android:background="#7B1FA2"
+        android:text="NHA - SI"
+        android:textColor="#ffffff"
+        android:id="@+id/theo_nha_si"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7B1FA2"
+        android:layout_margin="3dp"
+        android:text="VAN - DE "
+        android:textColor="#ffffff"
+        android:id="@+id/theo_van_de"/>
+   </LinearLayout>
+
+
+</FrameLayout>
