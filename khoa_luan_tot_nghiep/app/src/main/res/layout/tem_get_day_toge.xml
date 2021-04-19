@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/rlRoot_get_day_toge"
+    android:background="@drawable/nen_item_ngay"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:paddingHorizontal="1dp"
+    android:paddingVertical="1dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/nen_item_ngay_2"
+        android:paddingVertical="2dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:background="#ffffff"
+            android:textColor="#7B1FA2"
+            android:layout_height="wrap_content"
+            android:text="2021 - 02- 3"
+            android:id="@+id/show_ngay"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

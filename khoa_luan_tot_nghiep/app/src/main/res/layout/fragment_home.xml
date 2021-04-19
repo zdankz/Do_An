@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/home_frag"
+    android:layout_height="match_parent"
+    tools:context=".Frag.Home">
+
+    <!-- TODO: Update blank fragment layout -->
+  <RelativeLayout
+      android:layout_width="match_parent"
+
+      android:background="#FFFFFF"
+      android:layout_height="match_parent">
+      <ImageView
+          android:layout_width="match_parent"
+          android:id="@+id/banner"
+          android:src="@drawable/banner"
+          android:layout_height="150dp"
+          />
+      <LinearLayout
+          android:gravity="center"
+          android:id="@+id/list_show_1"
+          android:layout_below="@+id/banner"
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content">
+          <LinearLayout
+              android:background="#ffffff"
+              android:layout_width="110dp"
+              android:layout_margin="3dp"
+              android:id="@+id/show_nha_si_howm"
+              android:layout_height="110dp"
+              android:orientation="vertical">
+              <ImageView
+
+                  android:layout_gravity="center"
+                  android:background="@drawable/ic_nha_si"
+                    android:id="@+id/event_nhasi_home"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginTop="25dp"
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"/>
+              <TextView
+                  android:gravity="center"
+                  android:textColor="#D32F2F"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Nha Sĩ"/>
+
+          </LinearLayout>
+          <LinearLayout
+
+              android:background="#ffffff"
+              android:layout_width="110dp"
+              android:layout_margin="3dp"
+              android:layout_height="110dp"
+              android:orientation="vertical">
+              <ImageView
+                  android:layout_gravity="center"
+                  android:background="@drawable/ic_service"
+                  android:id="@+id/danh_sach_dich_vu_"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginTop="25dp"
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"/>
+              <TextView
+                  android:gravity="center"
+                  android:textColor="#F57C00"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Dịch Vụ"/>
+
+          </LinearLayout>
+          <LinearLayout
+              android:id="@+id/cauhoi"
+              android:background="#ffffff"
+              android:layout_width="110dp"
+              android:layout_margin="3dp"
+              android:layout_height="110dp"
+              android:orientation="vertical">
+              <ImageView
+                  android:layout_gravity="center"
+                  android:background="@drawable/ic_question"
+
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginTop="25dp"
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"/>
+              <TextView
+                  android:gravity="center"
+                  android:textColor="#00796B"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Câu hỏi "/>
+
+
+          </LinearLayout>
+
+      </LinearLayout>
+      <LinearLayout
+          android:gravity="center"
+          android:id="@+id/list_show"
+          android:layout_below="@+id/list_show_1"
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content">
+          <LinearLayout
+              android:background="#ffffff"
+              android:layout_width="110dp"
+              android:layout_margin="3dp"
+
+              android:layout_height="110dp"
+              android:orientation="vertical">
+              <ImageView
+                  android:layout_gravity="center"
+                  android:background="@drawable/ic_huongdan"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginTop="25dp"
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"/>
+              <TextView
+                  android:gravity="center"
+                  android:textColor="#E64A19"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Hướng dẫn"/>
+
+          </LinearLayout>
+          <LinearLayout
+
+              android:background="#ffffff"
+              android:layout_width="110dp"
+              android:layout_margin="3dp"
+              android:layout_height="110dp"
+              android:orientation="vertical">
+              <ImageView
+                  android:layout_gravity="center"
+                  android:background="@drawable/ic_tu_thuoc"
+
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginTop="25dp"
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"/>
+              <TextView
+                  android:gravity="center"
+                  android:textColor="#0097A7"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Tủ Thuốc"/>
+
+          </LinearLayout>
+          <LinearLayout
+              android:background="#ffffff"
+              android:layout_width="110dp"
+              android:layout_margin="3dp"
+              android:layout_height="110dp"
+              android:orientation="vertical">
+              <ImageView
+                  android:layout_gravity="center"
+                  android:background="@drawable/ic_cap_nhat"
+
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginTop="25dp"
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"/>
+              <TextView
+                  android:gravity="center"
+                  android:textColor="#7B1FA2"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Đang Cập Nhật "/>
+
+
+          </LinearLayout>
+
+      </LinearLayout>
+
+  </RelativeLayout>
+
+
+</FrameLayout>

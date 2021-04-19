@@ -5,5 +5,8 @@ data class NhaSi_Vande(
         val tendv : String,
         val motadv : String,
         val hinhanhdv : String,
-        val chiphi : String
+        val chiphi : String,
+        val time: String,
+        val idns : String,
+        val hoten : String
 )

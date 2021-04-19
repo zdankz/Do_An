@@ -30,5 +30,24 @@
             android:textSize="15sp" />
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_alignParentRight="true"
+
+
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:textColor="#ffffff"
+            android:id="@+id/detail_nhasi_vande"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:text="DETAIL"
+            android:background="@drawable/detail2"
+           />
+
+    </LinearLayout>
 
 </RelativeLayout>

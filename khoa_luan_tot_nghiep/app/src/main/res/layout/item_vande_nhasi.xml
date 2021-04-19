@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="#7B1FA2"
+    android:background="#C2185B"
     android:id="@+id/rlRoot_VanDe_NhaSi"
     android:layout_marginHorizontal="2dp"
     android:layout_marginTop="2dp">
@@ -16,7 +16,7 @@
         android:layout_height="70dp"/>
     <LinearLayout
         android:layout_toRightOf="@+id/ivUserAvatar_Vande_NhaSi"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:id="@+id/ccn"
         android:orientation="vertical"
         android:paddingTop="5dp"
@@ -42,6 +42,26 @@
             android:textSize="12sp" />
 
 
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_alignParentRight="true"
+
+
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:textColor="#ffffff"
+            android:id="@+id/detail_vande_nhasi"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:text="DETAIL"
+            android:background="@drawable/bo_tron_detail"/>
 
     </LinearLayout>
 

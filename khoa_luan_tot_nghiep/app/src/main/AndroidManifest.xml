@@ -9,20 +9,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Khoa_luan_tot_nghiep">
-        <activity android:name=".View.NhaSi.Detail_NhaSi"></activity>
-        <activity android:name=".View.VanDe.Show_Vande_NhaSi" />
-        <activity android:name=".View.VanDe.Show_Van_de" />
-        <activity android:name=".View.NhaSi.Show_NhaSi_VanDe" />
-        <activity android:name=".View.NhaSi.Show_Nha_Si" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".View.Link.Reply"></activity>
+        <activity android:name=".View.Link.List_Question" />
+        <activity android:name=".View.VanDe.VanDe_Home" />
+        <activity android:name=".View.NhaSi.NhaSi_Home" />
+        <activity android:name=".View.Link.SFL">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".View.Toge.Register">
 
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+        </activity>
+        <activity android:name=".View.Toge.time_VD" />
+        <activity android:name=".View.Toge.show_lich" />
+        <activity android:name=".View.VanDe.Detail_VanDe_NhaSi" />
+        <activity
+            android:name=".View.VanDe.Detail_Vande"
+            android:label="@string/title_activity_detail__vande"
+            android:theme="@style/Theme.Khoa_luan_tot_nghiep.NoActionBar" />
+        <activity android:name=".View.NhaSi.Detail_NhaSi_Vande" />
+        <activity android:name=".View.NhaSi.Detail_NhaSi" />
+        <activity android:name=".View.VanDe.Show_Vande_NhaSi" />
+        <activity android:name=".View.VanDe.Show_Van_de" />
+        <activity android:name=".View.NhaSi.Show_NhaSi_VanDe" />
+        <activity android:name=".View.NhaSi.Show_Nha_Si" />
+        <activity android:name=".MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+    </application>
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

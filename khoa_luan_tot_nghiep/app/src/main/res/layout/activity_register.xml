@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    tools:context=".View.Toge.Register">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/nen_inout_regiser"
+            android:hint="Họ và tên"
+            app:hintTextColor="#00796B"
+            android:layout_height="50dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:textColor="#00796B"
+                android:id="@+id/input_hoten"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            app:hintTextColor="#00796B"
+            android:background="@drawable/nen_inout_regiser"
+            android:hint="Số điện thoại"
+            android:layout_height="50dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:textColor="#00796B"
+                android:id="@+id/input_sodienthoai"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#00796B"
+            android:textSize="15sp"
+            android:text="Giới tính"/>
+        <RadioGroup
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/nen_inout_regiser"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+            <RadioButton
+                android:layout_width="150dp"
+                android:id="@+id/giotinh_nam"
+                android:shadowColor="#00796B"
+                android:layout_height="50dp"
+                android:textColor="#00796B"
+                android:text="Nam" />
+            <RadioButton
+            android:layout_width="150dp"
+                android:shadowColor="#00796B"
+                android:text="Nữ"
+                android:id="@+id/gioitinh_nu"
+                android:textColor="#00796B"
+            android:layout_height="50dp"/>
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:textColor="#00796B"
+            android:text="Nha sĩ :"
+            android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ten_nha_si_register"
+                android:layout_height="wrap_content"
+                android:text="DDAAY KAF TE NONG HA SU"
+                android:textColor="#00796B"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:textColor="#00796B"
+                android:text="Vấn đề : "
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/vandegapphai"
+                android:layout_height="wrap_content"
+                android:text="DDAAY KAF TE NONG HA SU"
+                android:textColor="#00796B"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:textColor="#00796B"
+                android:text="Chi phí ước tính : "
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/chiphi_uoctinh"
+                android:layout_height="wrap_content"
+                android:text="100.000.000 VND"
+                android:textColor="#00796B"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:textColor="#00796B"
+                android:text="Ngày đăng ký : "
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ngaydk"
+                android:layout_height="wrap_content"
+                android:text="20-10-1999"
+                android:textColor="#00796B"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:textColor="#00796B"
+                android:text="Thời gian"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ngaybd"
+                android:layout_height="wrap_content"
+                android:text="20-10-1999"
+                android:textColor="#00796B"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:textColor="#00796B"
+                android:text="đến"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ngaykt"
+                android:layout_height="wrap_content"
+                android:text="20-10-1999"
+                android:textColor="#00796B"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/load_url"/>
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+
+        android:layout_height="50dp"
+        android:text="BOOK NOW"
+        android:textColor="#ffffff"
+        android:id="@+id/bkkk"
+        android:background="#00796B"
+        android:layout_marginHorizontal="20dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

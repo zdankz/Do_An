@@ -7,6 +7,8 @@ data class NhaSi(
     val so_dt : String,
     val trinhdo: String,
     val gioithieu: String,
+    val hinhanh : String,
+    val lich : String ,
     val id_nhom_vd :String
 
 )

@@ -14,20 +14,28 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_margin="3dp"
+        android:layout_margin="2dp"
         android:layout_height="wrap_content"
         android:background="#7B1FA2"
-        android:text="NHA - SI"
+        android:text="CHỌN THEO NHA SĨ"
         android:textColor="#ffffff"
         android:id="@+id/theo_nha_si"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#7B1FA2"
-        android:layout_margin="3dp"
-        android:text="VAN - DE "
+        android:background="#C2185B"
+        android:layout_margin="2dp"
+        android:text="CHỌN THEO VẤN ĐỀ "
         android:textColor="#ffffff"
         android:id="@+id/theo_van_de"/>
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#D32F2F"
+           android:layout_margin="2dp"
+           android:text="THỜI GIAN THÍCH HỢP"
+           android:textColor="#ffffff"
+           android:id="@+id/theo_thoi_gian"/>
    </LinearLayout>
 
 

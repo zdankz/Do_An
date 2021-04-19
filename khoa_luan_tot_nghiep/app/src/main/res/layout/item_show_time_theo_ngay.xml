@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/nen_show_time"
+    android:id="@+id/rlRoot_time"
+    android:layout_marginVertical="3dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_margin="6dp"
+        android:id="@+id/ngay"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:text="Ngày :"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:text="............."
+            android:id="@+id/ngay_dang_ky"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/ngay"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:layout_marginHorizontal="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:text="Thời gian: "/>
+        <TextView
+            android:layout_marginHorizontal="5dp"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_bd"
+            android:text=".........."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="đến: "/>
+        <TextView
+            android:layout_marginHorizontal="5dp"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_end"
+            android:text=".........."/>
+    </LinearLayout>
+
+</RelativeLayout>

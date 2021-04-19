@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#7B1FA2"
+    android:layout_height="match_parent"
+    tools:context=".View.NhaSi.Detail_NhaSi_Vande">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/banner_avata_nhasi_vande"
+        android:gravity="center"
+        android:background="#7B1FA2"
+        android:layout_height="240dp">
+        <ImageView
+            android:layout_width="170dp"
+            android:id="@+id/avata_nhasi_vande_detail"
+            android:layout_gravity="center"
+            android:layout_height="170dp"
+            android:background="@drawable/bo_tron_avata_nha_si_detail"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/ten_nhasi_vande_detail"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VANDE ABCXYZ"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/banner_avata_nhasi_vande"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/khung_nha_si_detail"
+        android:layout_marginBottom="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:paddingTop="17dp"
+                android:paddingLeft="15dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textStyle="italic"
+                    android:textColor="#7B1FA2"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian ước tính :"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#7B1FA2"
+                    android:textSize="17sp"
+                    android:id="@+id/time_nha_si_vande_detail"
+                    android:text="076689630"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="15dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textStyle="italic"
+                    android:textColor="#7B1FA2"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content"
+                    android:text="Chi phí ước tính :"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#7B1FA2"
+                    android:textSize="17sp"
+                    android:id="@+id/chi_phi_nha_si_vande_detail"
+                    android:text="898989"/>
+            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:textStyle="italic"-->
+<!--                    android:textColor="#7B1FA2"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Trình độ học vấn :"/>-->
+<!--                <TextView-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#7B1FA2"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:id="@+id/trinh_do_hoc_van_nha_si_detail"-->
+<!--                    android:text="Tiên Sĩ Hạng II"/>-->
+
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:textStyle="italic"-->
+<!--                    android:textColor="#7B1FA2"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Lịch làm việc :"/>-->
+<!--                <TextView-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#7B1FA2"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:id="@+id/lich_lam_viec_nha_si_detail"-->
+<!--                    android:text="Nguyên Tuần"/>-->
+
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:paddingTop="5dp"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textStyle="italic"
+                    android:textColor="#7B1FA2"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content"
+                    android:text="Mô tả :"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:paddingRight="5dp"
+                    android:textColor="#7B1FA2"
+                    android:textSize="17sp"
+                    android:id="@+id/mota_nha_si_vande_detail"
+                    android:text="Đây là giới thiêu, có vẻ là dài nhưng thực chất rất ngắn và tùy theo mỗi bác sĩ chứ có đọc cũng như không à :)"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -57,6 +57,9 @@ class Show_NhaSi_VanDe : AppCompatActivity() {
             var mota_dichvu : String? =""
             var hinhanhh : String? = ""
             var chiphi : String? = ""
+            var time: String? =""
+            var idns : String? = ""
+            var ten : String? = ""
 
             var jsonArray: JSONArray = JSONArray(result)
             for (vd in 0..jsonArray.length() - 1) {
@@ -67,9 +70,10 @@ class Show_NhaSi_VanDe : AppCompatActivity() {
                 mota_dichvu = objectVD.getString("mota_dich_vu")
                 hinhanhh = objectVD.getString("hinh_anh_dich_vu")
                 chiphi = objectVD.getString("chiphi_dich_vu")
-
-
-                nhasi_vandes.add(NhaSi_Vande(id_dichvu,ten_dichvu,mota_dichvu,hinhanhh,chiphi))
+                time = objectVD.getString("thoi_gian_uoc_tinh")
+                idns = objectVD.getString("id_nha_si")
+                ten = objectVD.getString("ho_ten_nha_si")
+                nhasi_vandes.add(NhaSi_Vande(id_dichvu,ten_dichvu,mota_dichvu,hinhanhh,chiphi,time,idns,ten))
     //            vandes.add(_new_Vande(id_dichvu, ten_dichvu, mota_dichvu, hinhanhh, chiphi))
                 //nhasis.add(Nhasi(id_nhasi,ten_nhasi,gioi_tinh,sdt,trinh_do,mota_nhasi,id_nhom))
 

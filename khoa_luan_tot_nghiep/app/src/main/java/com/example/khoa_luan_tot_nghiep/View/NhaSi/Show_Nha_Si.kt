@@ -69,6 +69,8 @@ class Show_Nha_Si : AppCompatActivity() {
             var sdt : String? = ""
             var trinh_do : String? = ""
             var id_nhom: String? =""
+            var hinh_anh : String? = ""
+            var lich : String? =""
             var jsonArray: JSONArray = JSONArray(result)
             for (vd in 0..jsonArray.length() - 1) {
                 var objectVD: JSONObject = jsonArray.getJSONObject(vd)
@@ -78,8 +80,10 @@ class Show_Nha_Si : AppCompatActivity() {
                 trinh_do = objectVD.getString("trinh_do_nha_si")
                 sdt = objectVD.getString("so_dien_thoai_nha_si")
                 gioi_tinh  = objectVD.getString("gioi_tinh_nha_si")
+                hinh_anh = objectVD.getString("hinh_anh_nha_si")
+                lich = objectVD.getString("lich_lam_viec_nha_si")
                 id_nhom = objectVD.getString("id_nhom_dich_vu")
-                nhasis.add(NhaSi(id_nhasi, ten_nhasi, gioi_tinh, sdt, trinh_do, mota_nhasi, id_nhom))
+                nhasis.add(NhaSi(id_nhasi, ten_nhasi, gioi_tinh, sdt, trinh_do, mota_nhasi,hinh_anh,lich, id_nhom))
 
             }
             adapter.notifyDataSetChanged()

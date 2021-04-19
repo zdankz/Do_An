@@ -68,6 +68,7 @@ class Show_Van_de : AppCompatActivity() {
             var hinhanhvd : String? = ""
             var chiphivd : String? = ""
             var idnhom : String? = ""
+            var time : String? =""
 
             var jsonArray: JSONArray = JSONArray(result)
             for (vd in 0..jsonArray.length() - 1) {
@@ -79,7 +80,8 @@ class Show_Van_de : AppCompatActivity() {
                 hinhanhvd = objectVD.getString("hinh_anh_dich_vu")
                 chiphivd = objectVD.getString("chiphi_dich_vu")
                 idnhom  = objectVD.getString("id_nhom_dich_vu")
-                vandes.add(VanDe(idvd,idnhom,tenvd,mota,hinhanhvd,chiphivd))
+                time = objectVD.getString("thoi_gian_uoc_tinh")
+                vandes.add(VanDe(idvd,idnhom,tenvd,mota,hinhanhvd,chiphivd,time))
 
             }
             adapter.notifyDataSetChanged()

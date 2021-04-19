@@ -6,5 +6,8 @@ data class Vande_NhaSi (
     val gioitinh : String,
     val sodt : String,
     val trinhdo: String,
-    val gioithieu  : String
+    val gioithieu  : String,
+    val hinhanh : String,
+    val lich: String,
+        val iddv : String
 )

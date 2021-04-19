@@ -6,5 +6,6 @@ data class VanDe (
     val ten_vande: String,
     val mota : String,
     val hinhanh : String,
-    val chiphi: String
+    val chiphi: String,
+    val time: String
 )
