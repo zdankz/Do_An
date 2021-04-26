@@ -26,12 +26,12 @@ for($d= 1; $d<=31; $d++)
     // if (date('m', $time)==$month and date('D',$time) == $day) 
     if (date('m', $time)==$month  and  strpos($thu,date('D',$time)) !== false )       
         //$list[]=date('Y-m-d-D', $time);  
-        array_push($list, new ngay(date('d', $time),date('m', $time),date('Y-m-d', $time),date('D',$time),$id_ns,$id_dv));
+        array_push($list, new ngay(date('d', $time),date('m', $time),date('Y-m-d', $time),date('D',$time),$id_ns,$id_dv,$year));
 }
 echo json_encode($list,256);
 class ngay
 {
-		function __construct($day,$month,$ngay,$thu,$id_nha_si,$id_dich_vu)
+		function __construct($day,$month,$ngay,$thu,$id_nha_si,$id_dich_vu,$nam)
 
 		{	
 			$this->day = $day;
@@ -40,7 +40,7 @@ class ngay
 			$this->thu = $thu;
 			$this->id_nha_si = $id_nha_si;
 			$this->id_dich_vu = $id_dich_vu;
-						
+						$this->nam = $nam;
 		}
 }
 

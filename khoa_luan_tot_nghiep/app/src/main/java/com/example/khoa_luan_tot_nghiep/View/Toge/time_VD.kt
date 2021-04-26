@@ -65,10 +65,7 @@ class time_VD : AppCompatActivity() {
             var jsonArray: JSONArray = JSONArray(result)
             for (vd in 0..jsonArray.length() - 1) {
                 var objectVD: JSONObject = jsonArray.getJSONObject(vd)
-                //   ngay = objectVD.getString("ngay")
-                //    thu = objectVD.getString("thu")
-//
-                //ngay_lam_viec.add(ngay_lam_viec(ngay,thu))
+
                 idns = objectVD.getString("id_nha_si")
                 hoten = objectVD.getString("ho_ten_nha_si")
                 iddv = objectVD.getString("id_dich_vu")

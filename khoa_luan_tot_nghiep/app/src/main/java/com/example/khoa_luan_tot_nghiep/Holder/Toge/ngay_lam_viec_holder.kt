@@ -43,11 +43,12 @@ class ngay_lam_viec_holder (v: View): RecyclerView.ViewHolder(v) {
             var cal1 = Calendar.getInstance()
             var ngayhn1 = cal1.get(Calendar.DATE).toInt()
             var thang1 = cal1.get(Calendar.MONTH).toInt()
+            var nam1 = cal1.get(Calendar.YEAR).toInt()
             val i = Intent(rlRoon.context, time_VD::class.java)
-            if(ngay_lam_viec.thang.toInt() < thang1 ){
+            if(ngay_lam_viec.nam.toInt() < nam1 ){
                 Toast.makeText(rlRoon.context,"da qua thoi gian nay",Toast.LENGTH_SHORT).show()
             }
-             else if(ngay_lam_viec.thang.toInt() == thang1 && ngay_lam_viec.day.toInt() < ngayhn1 ){
+             else if(ngay_lam_viec.nam.toInt() == nam1 && ngay_lam_viec.thang.toInt() == thang1 && ngay_lam_viec.day.toInt() < ngayhn1 ){
                 Toast.makeText(rlRoon.context,"da qua thoi gian nay",Toast.LENGTH_SHORT).show()
             }
             else {

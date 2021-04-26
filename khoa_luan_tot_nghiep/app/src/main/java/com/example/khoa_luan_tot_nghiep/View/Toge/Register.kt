@@ -1,11 +1,14 @@
 package com.example.khoa_luan_tot_nghiep.View.Toge
 
+import android.content.Intent
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.khoa_luan_tot_nghiep.Entity.Toge.ngay_lam_viec
+import com.example.khoa_luan_tot_nghiep.MainActivity
 import com.example.khoa_luan_tot_nghiep.R
+import com.example.khoa_luan_tot_nghiep.View.Link.successful
 import kotlinx.android.synthetic.main.activity_detail__nha_si.*
 import kotlinx.android.synthetic.main.activity_register.*
 import org.json.JSONArray
@@ -16,6 +19,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 class Register : AppCompatActivity() {
+    public  var status : String? = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -24,16 +28,21 @@ class Register : AppCompatActivity() {
         vandegapphai.text = i.getStringExtra("tendv")
         chiphi_uoctinh.text = "${i.getStringExtra("chiphi")} VND"
         ngaydk.text = i.getStringExtra("ngay")
+        ngaydk.text = ngaydk.text.toString().replace("\\s".toRegex(), "")
         ngaybd.text = i.getStringExtra("bd")
         ngaykt.text = i.getStringExtra("kt")
-        val hoten = input_hoten.text.toString()
-        val sdt = input_sodienthoai.text.toString()
-        val url = "http://192.168.1.81:80/khoa_luan/API/fun_process/register.php?hovaten=${hoten}&sodienthoai=${sdt}&id_nha_si=${i.getStringExtra("id_ns")}" +
-                "&id_dich_vu=${i.getStringExtra("id_dv")}&thoi_gian_dang_ky=${i.getStringExtra("ngay")} ${i.getStringExtra("bd")}" +
-                "&thoi_gian_du_tru_ket_thuc=${i.getStringExtra("ngay")} ${i.getStringExtra("kt")}&chi_phi_uoc_tinh=${i.getStringExtra("chiphi")}"
+
+
         bkkk.setOnClickListener {
+            val hoten = input_hoten.text.toString()
+            val sdt = input_sodienthoai.text.toString()
+            val url = "http://192.168.1.81:80/khoa_luan/API/fun_process/register.php?hovaten=${hoten}&sodienthoai=${sdt}&id_nha_si=${i.getStringExtra("id_ns")}" +
+                    "&id_dich_vu=${i.getStringExtra("id_dv")}&thoi_gian_dang_ky=${i.getStringExtra("bd")}" +
+                    "&thoi_gian_du_tru_ket_thuc=${i.getStringExtra("kt")}&chi_phi_uoc_tinh=${i.getStringExtra("chiphi")}&ngay=${ngaydk.text}"
             load_url.text = url.toString()
-            Getdata().execute(url)
+           Getdata().execute(url)
+            var   i = Intent(this,successful::class.java)
+            startActivity(i)
         }
 
     }
@@ -53,11 +62,9 @@ class Register : AppCompatActivity() {
             for (vd in 0..jsonArray.length() - 1) {
                 var objectVD: JSONObject = jsonArray.getJSONObject(vd)
                 day = objectVD.getString("trangthai")
-
-
-
-
-
+                if(day.equals("THANH CONG")){
+                    Log.d("thanh cong",day.toString())
+                }
             }
 
         }

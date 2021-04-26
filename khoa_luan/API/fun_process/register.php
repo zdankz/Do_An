@@ -17,12 +17,17 @@
 	$thoi_gian_tao_don =  date('Y-m-d H:i:s');
 	//echo  $thoi_gian_tao_don;
 	//echo "</br>";
+
+	$ngay = $_GET['ngay'];
+
 	$thoi_gian_dang_ky = $_GET['thoi_gian_dang_ky'];
-	//echo  $thoi_gian_dang_ky;
-	//echo "</br>";
+	$thoi_gian_dang_ky = "".$ngay." ".$thoi_gian_dang_ky."";
+	// echo  $thoi_gian_dang_ky;
+	// echo "</br>";
 	$thoi_gian_du_tru_ket_thuc = $_GET['thoi_gian_du_tru_ket_thuc'];
-	//echo  $thoi_gian_du_tru_ket_thuc;
-	//echo "</br>";
+	$thoi_gian_du_tru_ket_thuc = "".$ngay." ".$thoi_gian_du_tru_ket_thuc."";
+	// echo  $thoi_gian_du_tru_ket_thuc;
+	// echo "</br>";
 	$chi_phi_uoc_tinh = $_GET['chi_phi_uoc_tinh'];
 	//echo  $chi_phi_uoc_tinh;
 	//echo "</br>";
@@ -88,7 +93,7 @@
 	// 	mysqli_query($connect,$query);
 
 
-	}	
+	//}	
 	class CHECK{
 		 public function __construct($trangthai)
 		{

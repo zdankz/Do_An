@@ -43,14 +43,15 @@
 
 // $add = $time_seconds + $time_bd;
 // //echo "</br>	";
-// //echo $add;
+ //echo $add;
 // $thoi_uoc_tinh = date('H:i:s',$add);
 // //echo $thoi_uoc_tinh;
 // return $thoi_uoc_tinh;
-date_default_timezone_set("Asia/Ho_Chi_Minh");
+// date_default_timezone_set("Asia/Ho_Chi_Minh");
+$date11 = "2020-25-4";
 
-$date = date('Y-m-d H:i:s');
-
-echo $date;
+$originalDate = "2010-21-03";  
+$newDate = date("Y-m-d", strtotime($originalDate));  
+echo $newDate;
 
 ?>

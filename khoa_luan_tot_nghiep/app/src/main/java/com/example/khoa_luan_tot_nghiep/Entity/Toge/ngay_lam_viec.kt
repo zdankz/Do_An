@@ -6,5 +6,6 @@ data class ngay_lam_viec (
     val ngay : String,
     val thu: String,
     val idns : String,
-    val iddv : String
+    val iddv : String,
+        val nam : String
 )

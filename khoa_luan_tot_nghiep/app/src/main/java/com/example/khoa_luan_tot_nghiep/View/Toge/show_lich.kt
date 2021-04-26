@@ -93,6 +93,7 @@ class show_lich : AppCompatActivity() {
             var thu : String? = ""
             var idns : String? = ""
             var iddv : String? = ""
+            var nam : String? =""
             var cal = Calendar.getInstance()
             var ngayhn = cal.get(Calendar.DATE).toInt()
             var jsonArray: JSONArray = JSONArray(result)
@@ -104,8 +105,9 @@ class show_lich : AppCompatActivity() {
                 thu = objectVD.getString("thu")
                 idns = objectVD.getString("id_nha_si")
                 iddv = objectVD.getString("id_dich_vu")
+                nam = objectVD.getString("nam")
 
-                    ngay_lam_viec.add(ngay_lam_viec(day,thang,ngay,thu,idns,iddv))
+                    ngay_lam_viec.add(ngay_lam_viec(day,thang,ngay,thu,idns,iddv,nam))
 
 
             }
