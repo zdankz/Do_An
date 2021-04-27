@@ -2,10 +2,10 @@
 
 	$idns = $_GET['idns'];
 
-	$connect = mysqli_connect("localhost", "root", "", "luan_an");
+	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
 	mysqli_query($connect, "SET NAMES 'utf8'");
 
-	$connect = mysqli_connect("localhost","root","","luan_an");
+	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
 	
 	$query = "SELECT khach_hang.ho_ten_khach_hang, dich_vu.ten_dich_vu,don_dat_lich.thoi_gian_dang_ky, don_dat_lich.thoi_gian_du_tru_ket_thuc from don_dat_lich join khach_hang on khach_hang.id_khach_hang = don_dat_lich.id_khach_hang join dich_vu on dich_vu.id_dich_vu = don_dat_lich.id_dich_vu where don_dat_lich.id_nha_si = '$idns'";
 	$data = mysqli_query($connect,$query);

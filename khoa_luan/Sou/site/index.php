@@ -1,14 +1,11 @@
 <?php 
 session_start();
 require "API/get_count_don.php";
-if($_SESSION['role'] != "1"){
-    header("Location: login.php");
-}
-
+if(!isset($_SESSION['role']))
+header("Location: login.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">

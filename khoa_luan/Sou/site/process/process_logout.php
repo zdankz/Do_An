@@ -1,9 +1,7 @@
 <?php 
-session_start(); 
- 
+session_start();  
 if (isset($_SESSION['role'])){
-    unset($_SESSION['role']); // xóa session login
-
+    unset($_SESSION['role']);
     header("Location: ../login.php");
     die();
 }

@@ -35,7 +35,7 @@
 	$list =array();
 
 	$result = array();
-	$connect = mysqli_connect("localhost", "root", "", "luan_an");
+	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
 	mysqli_query($connect, "SET NAMES 'utf8'");
 	$connect = mysqli_connect("localhost","root","","luan_an");
 	$query_check_sdt="SELECT id_khach_hang, so_dien_thoai  from khach_hang where so_dien_thoai = '$sdt'";
@@ -77,7 +77,7 @@
 			//echo $id_khach_hang;
 			// them_don($id_nha_si,$id_khach_hang,$id_dich_vu,$thoi_gian_tao_don,$thoi_gian_dang_ky,$thoi_gian_du_tru_ket_thuc,$chi_phi_uoc_tinh);
 			//echo $id_khach_hang;
-			$connect = mysqli_connect("localhost", "root", "", "luan_an");
+			$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
 			$query_chen= "INSERT INTO don_dat_lich values ('','$id_nha_si','$id_khach_hang','$id_dich_vu','$thoi_gian_tao_don','$thoi_gian_dang_ky','$thoi_gian_du_tru_ket_thuc','$chi_phi_uoc_tinh')";
 			mysqli_query($connect,$query_chen);
 			array_push($result,new CHECK('THANH CONG'));

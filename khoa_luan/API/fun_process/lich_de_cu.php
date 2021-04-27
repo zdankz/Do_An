@@ -1,7 +1,6 @@
 <?php
-	$connect = mysqli_connect("localhost", "root", "", "luan_an");
+	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
 	mysqli_query($connect, "SET NAMES 'utf8'");
-
 	$id_dv = $_GET['dichvu'];
 	$id_nha_si = $_GET['id_nha_si'];
 	$ngay = $_GET['ngay'];
@@ -13,7 +12,7 @@
 
 
 	//GET THEO DICH VU
-	$connect = mysqli_connect("localhost","root","","luan_an");	
+	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
 	$query = "SELECT id_dich_vu,ten_dich_vu,chiphi_dich_vu,thoi_gian_uoc_tinh from dich_vu where id_dich_vu = '$id_dv'";
 	$data = mysqli_query($connect,$query);
 	$arraydata = array();
@@ -29,7 +28,7 @@
 
 	
 // ==============Xuất lịch BS và add DV vào ===========================
-	$connect = mysqli_connect("localhost","root","","luan_an");	
+	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");	
 	$query_ns = "CALL show_time_next('$id_nha_si',$ngay)";
 	$data2 = mysqli_query($connect,$query_ns);
 	// $arraydata2 = array();
@@ -48,7 +47,7 @@
 
 	if((mysqli_num_rows($data2) == 0)) 
 	{
-			$connect = mysqli_connect("localhost","root","","luan_an");
+			$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
 			$batdau = "08:00:00";
 			$ngay = str_replace("'"," ",$ngay);
 			$query_getNS = "SELECT Id_nha_si,ho_ten_nha_si FROM nha_si WHERE Id_nha_si ='$id_nha_si'";

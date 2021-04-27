@@ -5,15 +5,12 @@ $month = $_GET['month'];
 $year = $_GET['year'];
 $idnhasi = $_GET['id_nhasi'];
 $id_dv = $_GET['dichvu'];
-//$day = $_GET['day'];
-
-$connect = mysqli_connect("localhost", "root", "", "luan_an");
+$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
 mysqli_query($connect, "SET NAMES 'utf8'");
 $query = "CALL get_day_nhasi($idnhasi)";
 $data = mysqli_query($connect,$query);
 $arraydata = array();
 			while ($row = mysqli_fetch_assoc($data)) {
-			# code...
 			array_push($arraydata, new db($row['lich_lam_viec_nha_si'],$row['id_nha_si']));
 }
 $thu = $arraydata[0]->thu;
@@ -40,10 +37,9 @@ class ngay
 			$this->thu = $thu;
 			$this->id_nha_si = $id_nha_si;
 			$this->id_dich_vu = $id_dich_vu;
-						$this->nam = $nam;
+			$this->nam = $nam;
 		}
 }
-
 class db
 {
 	function __construct($thu,$id_nha_si)
@@ -51,10 +47,5 @@ class db
 			$this->thu = $thu;	
 			$this->id_nha_si = $id_nha_si;					
 		}
-
 }
-
-
-
-
 ?>

@@ -1,6 +1,7 @@
 <?php 
+	require'connect.php';
 
-	$connect = mysqli_connect("localhost", "root", "", "luan_an");
+	//$connect = mysqli_connect("localhost", "root", "", "luan_an");
  	mysqli_query($connect, "SET NAMES 'utf8'");
 	$yeucau = $_GET['yeucau'];
 	if($yeucau == 1) // nhận sử lý sự kiện CREATE 
