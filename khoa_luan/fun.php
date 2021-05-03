@@ -55,5 +55,6 @@ $newDate = date("Y-m-d", strtotime($originalDate));
 echo $newDate;
 
 echo "ok";
+echo "string";
 
 ?>
