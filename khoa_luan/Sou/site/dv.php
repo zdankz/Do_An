@@ -6,17 +6,18 @@ if(!isset($_SESSION['role']))
     header("Location: login.php");
 }
 else {
-    $ten_nhom_dich_vu = "";
-    $mota_nhom_dich_vu = "";
+    $ten_dich_vu = "";
+    $mota_dich_vu = "";
     $yeucau = $_GET['yeucau'];
   if($yeucau == 1 ){ 
-    $tiltle = "Thêm Nhóm Dịch Vụ";
+    $tiltle = "Thêm Dịch Vụ";
     $button = "CREATE";
-     $id_nhom_dich_vu = "0";
+    $id_dich_vu = "0";
+    $an = "";
   }
   else if($yeucau == 2)
   {
-    $tiltle = "Cập Nhật Nhóm Dịch Vụ ";
+    $tiltle = "Cập Nhật Dịch Vụ ";
     $id_nhom_dich_vu = $_GET['id_nhom_dich_vu'];
     $ten_nhom_dich_vu = $_GET['ten_nhom_dich_vu'];
     $mota_nhom_dich_vu = $_GET['mota_nhom_dich_vu'];
@@ -36,8 +37,7 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title><?PHP echo $tiltle?></title>
+    <title><?php echo $tiltle;?></title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -318,37 +318,38 @@ else {
                     </ul>
 
                 </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
+               
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
                       <form action="./process/ndv_create.php" method="GET">
                           <div class="form-group">
-                            <label for="">Tên Nhóm Dịch Vụ</label>
-                            <input type="text" class="form-control" id="aa" aria-describedby="" value="<?php echo $ten_nhom_dich_vu?>" name="ten_nhom_dich_vu" placeholder="ten dich vu....">
-                            <small id="emailHelp" class="form-text text-muted">Vui lòng nhập đúng tên nhóm dịch vụ.</small>
+                            <label for="cars">Dịch Vụ Thuộc Nhóm:</label>
+                                    <select class="form-control" name="id_nhom_dich_vu" id="cars">
+                                      <option class="form-control" value="1">Thẩm Mỹ</option>
+                                      <option class="form-control" value="2">Bệnh Lý</option>
+                                    </select>
+                            <label for="">Tên Dịch Vụ</label>
+                            <input type="text" class="form-control" id="aa" aria-describedby="" name="ten_nhom_dich_vu" placeholder="ten dich vu....">
+                            <small id="emailHelp" class="form-text text-muted">Vui lòng nhập tên dịch vụ</small>
                           </div>
                           <div class="form-group">
                             <label for="">Mô tả</label>
-                            <input name="mota_nhom_dich_vu" type="text" class="form-control" value="<?php echo $mota_nhom_dich_vu?>" id="exampleInputPassword1" placeholder="mo ta">
+                            <input name="mota_dich_vu" type="text" class="form-control"  id="exampleInputPassword1" placeholder="mo ta">
                           </div>
-                          <div class="form-group" hidden="">
-                            <label for="">Mô tả</label>
-                            <input name="yeucau" value="<?php echo $yeucau;?>" type="text" class="form-control" id="exampleInputPassword1" placeholder="mo ta">
+                          <div class="form-group">
+                            <label for="">Chi phí</label>
+                            <input name="chiphi" value="" type="text" class="form-control" id="exampleInputPassword1" placeholder="mo ta">
                           </div>
-                          <div class="form-group" hidden="">
-                            <label for="">Mô tả</label>
-                            <input name="id_nhom_dich_vu" value="<?php echo $id_nhom_dich_vu;?>" type="text" class="form-control" id="exampleInputPassword1" placeholder="mo ta">
+                          <div class="form-group" >
+                            <label for="">Thời gian thực hiện</label>
+                            <input name="time" value="" type="time" class="form-control" id="exampleInputPassword1" >
                           </div>
 
                           <div class="form-check">
                             <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
                           </div>
-                      <button type="submit" class="btn btn-primary"><?php echo $button;; ?></button>
+                      <button type="submit" class="btn btn-primary"><?php echo $button;?></button>
                     </form>
 
                 </div>
@@ -360,9 +361,9 @@ else {
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
+                    <!-- <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2020</span>
-                    </div>
+                    </div> -->
                 </div>
             </footer>
             <!-- End of Footer -->

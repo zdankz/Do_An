@@ -34,9 +34,9 @@ class Register : AppCompatActivity() {
 
 
         bkkk.setOnClickListener {
-            val hoten = input_hoten.text.toString()
+            val hoten = input_hoten.text.toString().replace("\\s".toRegex(), "+")
             val sdt = input_sodienthoai.text.toString()
-            val url = "http://192.168.1.81:80/khoa_luan/API/fun_process/register.php?hovaten=${hoten}&sodienthoai=${sdt}&id_nha_si=${i.getStringExtra("id_ns")}" +
+            val url = "http://apptm.000webhostapp.com/khoa_luan/API/fun_process/register.php?hovaten=${hoten}&sodienthoai=${sdt}&id_nha_si=${i.getStringExtra("id_ns")}" +
                     "&id_dich_vu=${i.getStringExtra("id_dv")}&thoi_gian_dang_ky=${i.getStringExtra("bd")}" +
                     "&thoi_gian_du_tru_ket_thuc=${i.getStringExtra("kt")}&chi_phi_uoc_tinh=${i.getStringExtra("chiphi")}&ngay=${ngaydk.text}"
             load_url.text = url.toString()
@@ -63,7 +63,7 @@ class Register : AppCompatActivity() {
                 var objectVD: JSONObject = jsonArray.getJSONObject(vd)
                 day = objectVD.getString("trangthai")
                 if(day.equals("THANH CONG")){
-                    Log.d("thanh cong",day.toString())
+                    Log.d("trang thai",day.toString())
                 }
             }
 

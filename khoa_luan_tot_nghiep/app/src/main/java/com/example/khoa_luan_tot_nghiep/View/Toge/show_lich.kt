@@ -54,7 +54,7 @@ class show_lich : AppCompatActivity() {
                     Toast.makeText(this,"Xem lai thang",Toast.LENGTH_SHORT).show()
                 }else {
                     Toast.makeText(this,"OK",Toast.LENGTH_SHORT).show()
-                    val url : String = "http://192.168.1.81:80/khoa_luan/API/fun_process/api_show_ngay_lam_viec.php?month=${thang}&year=${nam}&id_nhasi=${id_ns}&dichvu=${id_dv}"
+                    val url : String = "http://apptm.000webhostapp.com/khoa_luan/API/fun_process/api_show_ngay_lam_viec.php?month=${thang}&year=${nam}&id_nhasi=${id_ns}&dichvu=${id_dv}"
                     Getdata().execute(url)
                     initAdapter()
                     initRecyclerView()

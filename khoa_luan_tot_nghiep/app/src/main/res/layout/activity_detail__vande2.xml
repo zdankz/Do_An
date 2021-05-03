@@ -49,7 +49,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:textStyle="italic"
-                    android:textColor="#C2185B"
+                    android:textColor="#090909"
                     android:textSize="17sp"
                     android:layout_height="wrap_content"
                     android:text="Thời gian ước tính :"/>
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textColor="#C2185B"
+                    android:textColor="#070707"
                     android:textSize="17sp"
                     android:id="@+id/time_vande_detail"
                     android:text="076689630"/>
@@ -71,7 +71,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:textStyle="italic"
-                    android:textColor="#C2185B"
+                    android:textColor="#070707"
                     android:textSize="17sp"
                     android:layout_height="wrap_content"
                     android:text="Chi phí ước tính :"/>
@@ -80,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textColor="#C2185B"
+                    android:textColor="#0B0A0A"
                     android:textSize="17sp"
                     android:id="@+id/chi_phi_vande_detail"
                     android:text="898989"/>
@@ -95,7 +95,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:textStyle="italic"
-                    android:textColor="#C2185B"
+                    android:textColor="#090909"
                     android:textSize="17sp"
                     android:layout_height="wrap_content"
                     android:text="Mô tả :"/>
@@ -105,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:paddingRight="5dp"
-                    android:textColor="#C2185B"
+                    android:textColor="#050505"
                     android:textSize="17sp"
                     android:id="@+id/mota_vande_detail"
                     android:text="Đây là giới thiêu, có vẻ là dài nhưng thực chất rất ngắn và tùy theo mỗi bác sĩ chứ có đọc cũng như không à :)"/>

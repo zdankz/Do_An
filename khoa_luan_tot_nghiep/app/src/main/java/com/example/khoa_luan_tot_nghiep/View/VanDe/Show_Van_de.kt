@@ -24,14 +24,14 @@ class Show_Van_de : AppCompatActivity() {
         setContentView(R.layout.activity_show__van_de)
         input_vande_vande.setOnCheckedChangeListener { group, checkedId ->
             if(checkedId == R.id.benhly_vande){
-                var URL_GET : String = "http://192.168.1.81:80/khoa_luan/API/Branch_VanDe/api_show_vande_nhomvd.php?key_nhom_dich_vu=2"
+                var URL_GET : String = "http://apptm.000webhostapp.com/khoa_luan/API/Branch_VanDe/api_show_vande_nhomvd.php?key_nhom_dich_vu=2"
                 clearListVideo()
                 Getdata().execute(URL_GET)
                 initAdapter()
                 initRecyclerView()
 
             } else if(checkedId == R.id.thammy_vande){
-                var URL_GET : String = "http://192.168.1.81:80/khoa_luan/API/Branch_VanDe/api_show_vande_nhomvd.php?key_nhom_dich_vu=1"
+                var URL_GET : String = "http://apptm.000webhostapp.com/khoa_luan/API/Branch_VanDe/api_show_vande_nhomvd.php?key_nhom_dich_vu=1"
                 clearListVideo()
                 Getdata().execute(URL_GET)
                 initAdapter()

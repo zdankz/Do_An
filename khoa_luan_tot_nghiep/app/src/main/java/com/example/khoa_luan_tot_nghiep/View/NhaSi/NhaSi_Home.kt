@@ -26,7 +26,7 @@ class NhaSi_Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nha_si__home)
         clearListVideo()
-        var url = "http://192.168.1.81:80/khoa_luan/API/Branch_NhaSi/api_show_nha_si.php"
+        var url = "http://apptm.000webhostapp.com/khoa_luan/API/Branch_NhaSi/api_show_nha_si.php"
         Getdata().execute(url)
         initAdapter()
         initRecyclerView()

@@ -408,8 +408,9 @@
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                        <div class="card-header py-3" style="display: inline-block;>
+                            <h6 class="m-0 font-weight-bold text-primary">Danh Sách Dịch Vụ Hiện có</h6>
+                             <a  class="m-0 font-weight-bold text-primary" style="float: right;" href="dv.php?yeucau=1">Thêm Dịch Vụ<a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -419,9 +420,7 @@
                                             <th>ID</th>
                                             <th>Name</th>
                                             <th>Name_Group</th>
-                                            <!-- <th>Info</th>
-                                            <th>Image</th> -->
-                                            <th>Prize</th>
+                                             <th>Prize</th>
                                             <th>Time</th>
                                         </tr>
                                     </thead>                                   
@@ -433,29 +432,15 @@
                         </div>
                     </div>
 
-                </div>
-                <!-- /.container-fluid -->
+                </div>            
 
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
-                    <!-- <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
-                    </div> -->
                 </div>
             </footer>
-            <!-- End of Footer -->
-
         </div>
-        <!-- End of Content Wrapper -->
-
     </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
@@ -474,7 +459,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="login.php">Logout</a>
                 </div>
             </div>
         </div>
@@ -519,13 +504,6 @@
                  temp += "<td>"+ u.chiphi_dich_vu +"</td>";
                 temp += "<td>"+ u.thoi_gian_uoc_tinh +"</td>";
 
-                // temp += "<td>"+ u.time_cre +"</td>";
-                // temp += "<td>"+ u.time_yeucau +"</td>";
-                // temp += "<td>"+ u.id_trangthai +"</td>";
-                
-                // temp += "<td style='text-align:center'>"+"<p><a href='../Process/process_done.php?stt="+u.stt+"&sdt="+u.sdt+"'><button class='btn btn-primary btn-sm'>DONE</button ></a></br><a href='#'></a></p>"+"</td>";
-                // temp += "<td style='text-align:center'>"+"<p><a href='../Process/process_reaccept.php?stt="+u.stt+"&sdt="+u.sdt+"'><button class='btn btn-primary btn-sm'>Re</button></a></br><a href='#'></a></p>"+"</td>";  
-                // temp += "<td style='text-align:center'>"+"<p><a href='#'><button>Update</button></a></br><a href='#'></a></p>"+"</td>";        
 
                 })
             

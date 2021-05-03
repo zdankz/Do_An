@@ -25,7 +25,7 @@ class VanDe_Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_van_de__home)
-        var URL_GET : String = "http://192.168.1.81:80/khoa_luan/API/Branch_VanDe/show_vande.php"
+        var URL_GET : String = "http://apptm.000webhostapp.com/khoa_luan/API/Branch_VanDe/show_vande.php"
         clearListVideo()
         Getdata().execute(URL_GET)
         initAdapter()
