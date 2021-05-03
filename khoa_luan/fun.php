@@ -54,4 +54,6 @@ $originalDate = "2010-21-03";
 $newDate = date("Y-m-d", strtotime($originalDate));  
 echo $newDate;
 
+echo "ok";
+
 ?>
