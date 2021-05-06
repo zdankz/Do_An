@@ -1,5 +1,4 @@
 <?php
-
 	$id_ns = $_GET['id_nha_si'];
 	$id_nhomdv = $_GET['id_nhom_van_de'];
 	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");

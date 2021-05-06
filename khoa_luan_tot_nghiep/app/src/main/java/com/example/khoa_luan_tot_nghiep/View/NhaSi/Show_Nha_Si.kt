@@ -25,13 +25,13 @@ class Show_Nha_Si : AppCompatActivity() {
         input_vande.setOnCheckedChangeListener { group, checkedId ->
             if(checkedId == R.id.benhly_nhasi){
                 clearListVideo()
-                var url = "http://apptm.000webhostapp.com/khoa_luan/API/Branch_NhaSi/api_show_nhasi_nhomdv.php?key_nhom_dich_vu=2"
+                var url = "https://apptm.000webhostapp.com/khoa_luan/API/Branch_NhaSi/api_show_nhasi_nhomdv.php?key_nhom_dich_vu=2"
                 Getdata().execute(url)
                 initAdapter()
                 initRecyclerView()
             }else if (checkedId == R.id.thammy_nhasi){
                 clearListVideo()
-                var url = "http://apptm.000webhostapp.com/khoa_luan/API/Branch_NhaSi/api_show_nhasi_nhomdv.php?key_nhom_dich_vu=1"
+                var url = "https://apptm.000webhostapp.com/khoa_luan/API/Branch_NhaSi/api_show_nhasi_nhomdv.php?key_nhom_dich_vu=1"
                 Getdata().execute(url)
                 initAdapter()
                 initRecyclerView()

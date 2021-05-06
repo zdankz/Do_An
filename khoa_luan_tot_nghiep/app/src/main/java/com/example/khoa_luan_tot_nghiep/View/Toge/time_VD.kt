@@ -27,7 +27,7 @@ class time_VD : AppCompatActivity() {
         var i = intent
 
         clearListVideo()
-            val url = "http://apptm.000webhostapp.com/khoa_luan/API/fun_process/lich_de_cu.php?dichvu=${i.getStringExtra("dichvu")}&id_nha_si=${i.getStringExtra("idns")}&ngay='${i.getStringExtra("ngay")}'"
+            val url = "https://apptm.000webhostapp.com/khoa_luan/API/fun_process/lich_de_cu.php?dichvu=${i.getStringExtra("dichvu")}&id_nha_si=${i.getStringExtra("idns")}&ngay='${i.getStringExtra("ngay")}'"
             Getdata().execute(url)
             initAdapter()
             initRecyclerView()

@@ -25,7 +25,7 @@ class Show_NhaSi_VanDe : AppCompatActivity() {
         var i = intent
         var id_ns: String? = i.getStringExtra("nhasi")
         var id_nhom : String? = i.getStringExtra("nhom")
-        var url :String = "http://apptm.000webhostapp.com/khoa_luan/API/Branch_NhaSi/api_show_dich_vu_theo_nhasi.php?id_nha_si=${id_ns}&id_nhom_van_de=${id_nhom}"
+        var url :String = "https://apptm.000webhostapp.com/khoa_luan/API/Branch_NhaSi/api_show_dich_vu_theo_nhasi.php?id_nha_si=${id_ns}&id_nhom_van_de=${id_nhom}"
         clearListVideo()
         Getdata().execute(url)
         initAdapter()

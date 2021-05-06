@@ -1,28 +1,23 @@
 <?php
 session_start();
-require "API/get_count_don.php";
 if(!isset($_SESSION['role']))
 {   
     header("Location: login.php");
 }
 else {
-    $ten_dich_vu = "";
-    $mota_dich_vu = "";
-    $yeucau = $_GET['yeucau'];
+    $ten_nha_si = "";   
+    $yeucau = $_GET['yeucau_ns'];
   if($yeucau == 1 ){ 
-    $_SESSION['yeucau'] = 1;
-    $tiltle = "Thêm Dịch Vụ";
+    $_SESSION['yeucau_ns'] = 1;
+    $tiltle = "Thêm Nha Sĩ";
     $button = "CREATE";
-    $id_dich_vu = "0";
-    $an = "";
+    $id_nha_si = "0"; 
   }
   else if($yeucau == 2)
   {
-    $_SESSION['yeucau'] = 2;
-    $tiltle = "Cập Nhật Dịch Vụ ";
-    $id_dich_vu = $_GET['id_dich_vu'];
-    // $ten_nhom_dich_vu = $_GET['ten_nhom_dich_vu'];
-    // $mota_nhom_dich_vu = $_GET['mota_nhom_dich_vu'];
+    $_SESSION['yeucau_ns'] = 2;
+    $tiltle = "Cập Nhật Thông Tin Nha Sĩ ";
+    $id_nha_si = $_GET['id_nha_si'];
     $button = "UPDATE";
 
   }
@@ -321,31 +316,43 @@ else {
                <!-- ./process/dv_create.php -->
                 <div class="container-fluid">
                     <h1 class="h3 mb-4 text-gray-800"><?php echo $button; ?></h1> 
-                      <form action="./process/dv_create.php" method="POST" enctype="multipart/form-data">
+                      <form action="" method="POST" enctype="multipart/form-data">
                           <div class="form-group">
-                            <label for="cars">Dịch Vụ Thuộc Nhóm:</label>
-                                    <select class="form-control" name="id_nhom_dich_vu" id="cars">
-                                      <option class="form-control" value="1">Thẩm Mỹ</option>
-                                      <option class="form-control" value="2">Bệnh Lý</option>
-                                    </select>
-                            <label for="">Tên Dịch Vụ</label>
-                            <input type="text" class="form-control" id="aa" aria-describedby="" name="ten_dich_vu" placeholder="ten dich vu....">
-                            <small id="emailHelp" class="form-text text-muted">Vui lòng nhập tên dịch vụ</small>
+                            <label for="cars">Họ Tên Nha Sĩ</label>
+                            <input type="text" name="hoten" placeholder="name" required="" class="form-control" >
+                            <label for="">Giới Tính</label></br>
+                           <input type="radio" id="male" name="gioitinh" value="Nam">
+                            <label for="male">Nam</label><br>
+                            <input type="radio" id="female" name="gioitinh" value="Nữ">
+                            <label for="female">Nữ</label><br>
+                            <small id="emailHelp" class="form-text text-muted">Vui lòng chọn giới tính</small>
                           </div>
                           <div class="form-group">
-                            <label for="">Mô tả</label>
-                            <input name="mota_dich_vu" type="text" class="form-control"  id="exampleInputPassword1" placeholder="mo ta">
+                            <label for="">Số Điện Thoại Của Nha Sĩ</label>
+                            <input name="sdt" type="text" class="form-control"  id="exampleInputPassword1" placeholder="phone number">
                           </div>
                           <div class="form-group">
-                            <label for="">Chi phí</label>
-                            <input name="chiphi" value="" type="text" class="form-control" id="exampleInputPassword1" placeholder="mo ta">
+                            <label for="">Trình Độ Nha Sĩ</label>
+                            <input name="trinhdo" value="" type="text" class="form-control" id="exampleInputPassword1" placeholder="trinh do">
                           </div>
                           <div class="form-group" >
-                            <label for="">Thời gian thực hiện</label>
-                            <input name="time" value="" type="text" class="form-control" class="form-control"id="exampleInputPassword1" placeholder="hh:mm:ss" >
+                            <label for="">Giới Thiệu Sơ Lược</label>
+                            <input name="gioithieu" value="" type="text" class="form-control" class="form-control" id="exampleInputPassword1" placeholder="" >
+                          </div>
+                          <div class="form-group" >
+                            <label for="">Lịch Làm Việc</label></br>
+                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Mon">Thứ 2
+                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Tue">Thứ 3
+                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Wed">Thứ 4 </br>
+                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Thu">Thứ 5
+                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Fri">Thứ 6
+                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Sat">Thứ 7
+                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Sun">Chủ Nhật
+                            
+                           
                           </div>
                            <div class="form-group" >
-                            <label for="">Chọn Hình Ảnh CHo Dịch Vụ</label>
+                            <label for="">Ảnh Đại Diện</label>
                             <input type="file" name="file" class="form-control">
                           </div>
 

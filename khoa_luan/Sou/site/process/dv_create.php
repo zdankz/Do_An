@@ -1,29 +1,83 @@
 <?php 
+	session_start();
 	require'connect.php';
  	mysqli_query($connect, "SET NAMES 'utf8'");
-	$yeucau = $_GET['yeucau'];
-	if($yeucau == 1) 
+	if(isset($_SESSION['yeucau']) && $_SESSION['yeucau'] == 1) 
 	{
-		$ten_nhom_dich_vu = $_GET['ten_nhom_dich_vu'];
-		$mota_nhom_dich_vu = $_GET['mota_nhom_dich_vu'];
-		$query_create = "INSERT into dich_vu(ten_nhom_dich_vu,mota_nhom_dich_vu) VALUES ('$ten_nhom_dich_vu','$mota_nhom_dich_vu')";
+			if(isset($_FILES['file'])){
+				$error = arraY();
+				$file = $_FILES['file'];
+				$file_Name = $_FILES['file']['name'];
+				$file_TpmName = $_FILES['file']['tmp_name'];
+				$file_Size = $_FILES['file']['size'];
+				//$fileError = $_FILES['file']['error'];
+				$file_Type = $_FILES['file']['type'];
+				$tmp = explode('.', $_FILES['file']['name']);
+				$file_Ext = strtolower(end($tmp));
+				//$fileActuaExt = strtolower(end($fileExt));
+				$allowed = array('jpg','jpeg','png',);
+				if(in_array($file_Ext, $allowed) == false){
+					$error[] = "pless chosee image";
+				}
+				if(empty($error) == true){
+					move_uploaded_file($file_TpmName, "uploads/" . $file_Name);
+					$url = pathinfo($_SERVER['HTTP_REFERER']);
+					$url['dirname'];
+					$path = $url['dirname']."/process/uploads/" . $file_Name;
+					
+				}
+							}	
+		$id_nhom = $_POST['id_nhom_dich_vu'];		
+		$ten_dich_vu = $_POST['ten_dich_vu'];		
+		$mota_dich_vu = $_POST['mota_dich_vu'];		
+		$chi_phi = $_POST['chiphi'];		
+		$thoi_gian = $_POST['time'];		
+		$query_create = "INSERT into dich_vu(id_nhom_dich_vu,ten_dich_vu,mota_dich_vu,hinh_anh_dich_vu,chiphi_dich_vu,thoi_gian_uoc_tinh) VALUES ('$id_nhom','$ten_dich_vu','$mota_dich_vu','$path','$chi_phi','$thoi_gian')";
 		mysqli_query($connect,$query_create);
-		header("Location: ../list_nhom_dich_vu.php");
+		unset($_SESSION['yeucau']);		
+		header("Location: ../list_dich_vu.php");
 	}
-	// else if($yeucau == 2) // nhan yeu cầu update
-	// {
-	// 	$id_nhom_dich_vu = $_GET['id_nhom_dich_vu'];
-	// 	$ten_nhom_dich_vu = $_GET['ten_nhom_dich_vu'];
-	// 	$mota_nhom_dich_vu = $_GET['mota_nhom_dich_vu'];		
-	// 	$query_create = "UPDATE nhom_dich_vu set ten_nhom_dich_vu = '$ten_nhom_dich_vu', mota_nhom_dich_vu = '$mota_nhom_dich_vu' where id_nhom_dich_vu = '$id_nhom_dich_vu'";
-	// 	mysqli_query($connect,$query_create);
-	// 	header("Location: ../list_nhom_dich_vu.php");		
-	// }
-	// else if($yeucau == 3)
-	// {
-	// 	$id_nhom_dich_vu = $_GET['id_nhom_dich_vu'];		
-	// 	$query_create = "DELETE from nhom_dich_vu where id_nhom_dich_vu = '$id_nhom_dich_vu'";
-	// 	mysqli_query($connect,$query_create);
-	// 	header("Location: ../list_nhom_dich_vu.php");
-	// }
+	 if(isset($_SESSION['yeucau']) && $_SESSION['yeucau'] == 2) 
+	{
+			if(isset($_FILES['file'])){
+				$error = arraY();
+				$file = $_FILES['file'];
+				$file_Name = $_FILES['file']['name'];
+				$file_TpmName = $_FILES['file']['tmp_name'];
+				$file_Size = $_FILES['file']['size'];
+				//$fileError = $_FILES['file']['error'];
+				$file_Type = $_FILES['file']['type'];
+				$tmp = explode('.', $_FILES['file']['name']);
+				$file_Ext = strtolower(end($tmp));
+				//$fileActuaExt = strtolower(end($fileExt));
+				$allowed = array('jpg','jpeg','png',);
+				if(in_array($file_Ext, $allowed) == false){
+					$error[] = "pless chosee image";
+				}
+				if(empty($error) == true){
+					move_uploaded_file($file_TpmName, "uploads/" . $file_Name);
+					$url = pathinfo($_SERVER['HTTP_REFERER']);
+					$url['dirname'];
+					$path = $url['dirname']."/process/uploads/" . $file_Name;
+					
+				}
+							}	
+		$id_dv = $_POST['id_dich_vu'];		
+		$id_nhom = $_POST['id_nhom_dich_vu'];		
+		$ten_dich_vu = $_POST['ten_dich_vu'];		
+		$mota_dich_vu = $_POST['mota_dich_vu'];				
+		$chi_phi = $_POST['chiphi'];			
+		$thoi_gian = $_POST['time'];			
+		$query_create = "UPDATE dich_vu SET id_nhom_dich_vu='$id_nhom',ten_dich_vu='$ten_dich_vu',mota_dich_vu='$mota_dich_vu',hinh_anh_dich_vu='$path',chiphi_dich_vu='$chi_phi',thoi_gian_uoc_tinh='$thoi_gian' WHERE id_dich_vu='$id_dv'";
+		mysqli_query($connect,$query_create);
+		unset($_SESSION['yeucau']);		
+		header("Location: ../list_dich_vu.php");
+	}
+	if(isset($_GET['yeucau']) && $_GET['yeucau'] == 3)
+	{
+		$id_dich_vu = $_GET['id_dich_vu'];		
+		$query_create = "DELETE from dich_vu where id_dich_vu = '$id_dich_vu'";
+		mysqli_query($connect,$query_create);
+		header("Location: ../list_dich_vu.php");
+	}
 ?>

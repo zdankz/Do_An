@@ -1,8 +1,9 @@
 <?php 
 session_start();
 require "API/get_count_don.php";
-if(!isset($_SESSION['role']))
+if(!isset($_SESSION['role'])){
 header("Location: login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -342,7 +343,7 @@ header("Location: login.php");
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -353,7 +354,7 @@ header("Location: login.php");
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="process/process_logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

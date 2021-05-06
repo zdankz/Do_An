@@ -31,7 +31,7 @@ class Show_Vande_NhaSi : AppCompatActivity() {
         var i = intent
         var id = i.getStringExtra("vande")
         et.setText(id.toString())
-        var url :String = "http://apptm.000webhostapp.com/khoa_luan/API/Branch_VanDe/show_nhasi_theo_vande.php?id_dich_vu=${id}"
+        var url :String = "https://apptm.000webhostapp.com/khoa_luan/API/Branch_VanDe/show_nhasi_theo_vande.php?id_dich_vu=${id}"
         clearListVideo()
         Getdata().execute(url)
         initAdapter()
