@@ -9,12 +9,10 @@
 				$file = $_FILES['file'];
 				$file_Name = $_FILES['file']['name'];
 				$file_TpmName = $_FILES['file']['tmp_name'];
-				$file_Size = $_FILES['file']['size'];
-				//$fileError = $_FILES['file']['error'];
+				$file_Size = $_FILES['file']['size'];			
 				$file_Type = $_FILES['file']['type'];
 				$tmp = explode('.', $_FILES['file']['name']);
-				$file_Ext = strtolower(end($tmp));
-				//$fileActuaExt = strtolower(end($fileExt));
+				$file_Ext = strtolower(end($tmp));				
 				$allowed = array('jpg','jpeg','png',);
 				if(in_array($file_Ext, $allowed) == false){
 					$error[] = "pless chosee image";
@@ -23,10 +21,8 @@
 					move_uploaded_file($file_TpmName, "uploads/" . $file_Name);
 					$url = pathinfo($_SERVER['HTTP_REFERER']);
 					$url['dirname'];
-					$path = $url['dirname']."/process/uploads/" . $file_Name;
-					
-				}
-							}	
+					$path = $url['dirname']."/process/uploads/" . $file_Name;					
+				}							}	
 		$id_nhom = $_POST['id_nhom_dich_vu'];		
 		$ten_dich_vu = $_POST['ten_dich_vu'];		
 		$mota_dich_vu = $_POST['mota_dich_vu'];		
@@ -44,12 +40,10 @@
 				$file = $_FILES['file'];
 				$file_Name = $_FILES['file']['name'];
 				$file_TpmName = $_FILES['file']['tmp_name'];
-				$file_Size = $_FILES['file']['size'];
-				//$fileError = $_FILES['file']['error'];
+				$file_Size = $_FILES['file']['size'];				
 				$file_Type = $_FILES['file']['type'];
 				$tmp = explode('.', $_FILES['file']['name']);
-				$file_Ext = strtolower(end($tmp));
-				//$fileActuaExt = strtolower(end($fileExt));
+				$file_Ext = strtolower(end($tmp));				
 				$allowed = array('jpg','jpeg','png',);
 				if(in_array($file_Ext, $allowed) == false){
 					$error[] = "pless chosee image";
@@ -58,10 +52,9 @@
 					move_uploaded_file($file_TpmName, "uploads/" . $file_Name);
 					$url = pathinfo($_SERVER['HTTP_REFERER']);
 					$url['dirname'];
-					$path = $url['dirname']."/process/uploads/" . $file_Name;
-					
-				}
-							}	
+					$path = $url['dirname']."/process/uploads/" . $file_Name;					
+				}							
+			}	
 		$id_dv = $_POST['id_dich_vu'];		
 		$id_nhom = $_POST['id_nhom_dich_vu'];		
 		$ten_dich_vu = $_POST['ten_dich_vu'];		

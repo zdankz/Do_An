@@ -21,7 +21,7 @@ if($_SESSION['role'] ==1 ){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dich Vu</title>
+    <title>Danh Đơn Đăng Kí Chưa Duyệt</title>
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -40,7 +40,7 @@ if($_SESSION['role'] ==1 ){
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">QUẢN LÝ ĐẶT LỊCH<sup></sup></div>
+                <!-- <div class="sidebar-brand-text mx-3">QUẢN LÝ ĐẶT LỊCH<sup></sup></div> -->
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -58,7 +58,7 @@ if($_SESSION['role'] ==1 ){
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -71,10 +71,10 @@ if($_SESSION['role'] ==1 ){
                         <a class="collapse-item" href="list_nha_si.php">Nha Sĩ</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -84,13 +84,13 @@ if($_SESSION['role'] ==1 ){
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Chính Sách Quản Lý</h6>
-                        <a class="collapse-item" href="utilities-color.html">Thay Đổi Password</a>
+                        <a class="collapse-item" href="utilities-color.html">Thay Đổi Password</a> -->
                         <!-- <a class="collapse-item" href="utilities-border.html"> Nhóm Dịch Vụ</a>
                         <a class="collapse-item" href="utilities-animation.html">Thêm</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a> -->
-                    </div>
+                    <!-- </div>
                 </div>
-            </li>
+            </li> -->
            
             <hr class="sidebar-divider">
 
@@ -195,28 +195,31 @@ if($_SESSION['role'] ==1 ){
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Dịch Vụ</h1>
-                    <p class="mb-4">Dịch Vụ Hiện CÓ Tại Nha Khoa<a target="_blank"
-                            href="https://datatables.net">VietHan Dental</a>.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Đơn Đăng Kí</h1>
+                    <p class="mb-4">Các đơn đang chờ phê duyệt<a target="_blank"
+                            href="">VietHan Dental</a>.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3" style="display: inline-block;">
-                            <h6 class="m-0 font-weight-bold text-primary">Danh Sách Dịch Vụ Hiện có</h6>
-                             <a  <?php echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="dv.php?yeucau=1">Thêm Dịch Vụ<a>
+                            <h6 class="m-0 font-weight-bold text-primary">Hiện có</h6>
+                             <!-- <a  <?php //echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="dv.php?yeucau=1">Thêm Dịch Vụ<a> -->
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>id_dich_vu</th>
-                                            <th>ten_dich_vu</th>
-                                            <th>ten_nhom_dich_vu</th>
-                                             <th>chi_phi</th>
-                                            <th>thoi_gian_uoc_tinh</th>
-                                            <th <?php echo $xem; ?>>Chỉnh Sửa</th>
-                                            <th <?php echo $xem; ?>>Xóa</th>
+                                            <th>id_don_dat_lich</th>
+                                            <th>ho_ten_khach_hang</th>
+                                            <th>ho_ten_nha_si</th>
+                                             <th>ten_dich_vu</th>
+                                            <th>thoi_gian_tao_don</th>
+                                            <th >thoi_gian_dang_ky</th>
+                                            <th>thoi_gian_du_tru_ket_thuc</th>
+                                            <th>chi_phi_uoc_tinh</th>
+                                            <th>DUyệt Đơn</th>
+                                            <th>Hủy Đơn</th>
                                         </tr>
                                     </thead>                                   
                                     <tbody id="data">
@@ -277,7 +280,7 @@ if($_SESSION['role'] ==1 ){
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
     <script type="text/javascript">
-        const url ="./API/list_dich_vu.php";
+        const url ="./API/list_wait.php";
     fetch(url).then(
       res=>{
         res.json().then(
@@ -289,15 +292,17 @@ if($_SESSION['role'] ==1 ){
               data.forEach((u)=> {
                 
                 temp +="<tr>";
-                temp += "<td>"+ u.id_dich_vu +"</td>";
-                temp +=   "<td>"+ u.ten_dich_vu +"</td>"
-                temp += "<td>"+ u.ten_nhom_dich_vu +"</td>";
-                // temp += "<td>"+ u.mota_dich_vu+"</td>";                
-                // temp += "<td>"+ u.hinh_anh_dich_vu +"</td>";                
-                 temp += "<td>"+ u.chiphi_dich_vu +"</td>";
-                temp += "<td>"+ u.thoi_gian_uoc_tinh +"</td>";
-                temp +=  "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='dv.php?yeucau=2&id_dich_vu="+u.id_dich_vu+"'><button type='button' class='btn btn-outline-info'>X</button></a></p>"+"</td>";
-                temp += "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='./process/dv_create.php?yeucau=3&id_dich_vu="+u.id_dich_vu+"'><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>"
+                temp += "<td>"+ u.id_don_dat_lich +"</td>";
+                temp +=   "<td>"+ u.ho_ten_khach_hang +"</td>"
+                temp += "<td>"+ u.ho_ten_nha_si +"</td>";
+                              
+                 temp += "<td>"+ u.ten_dich_vu +"</td>";                
+                 temp += "<td>"+ u.thoi_gian_tao_don +"</td>";
+                temp += "<td>"+ u.thoi_gian_dang_ky +"</td>";
+                temp += "<td>"+ u.thoi_gian_du_tru_ket_thuc +"</td>";
+                temp += "<td>"+ u.chi_phi_uoc_tinh +"</td>";
+                temp +=  "<td  style='text-align:center'>"+"<p><a href='process/duyet_don.php?id_don_dat_lich="+u.id_don_dat_lich+"&thoi_gian_dang_ky="+u.thoi_gian_dang_ky+"&thoi_gian_du_tru_ket_thuc="+u.thoi_gian_du_tru_ket_thuc+"'><button type='button' class='btn btn-outline-info'>V</button></a></p>"+"</td>";
+                temp += "<td  style='text-align:center'>"+"<p><a href=''><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>";
 
 
                 })

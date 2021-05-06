@@ -1,28 +1,8 @@
-<?php
-session_start();
-if(!isset($_SESSION['role']))
-{   
-    header("Location: login.php");
-}
-else {
-    $ten_nha_si = "";
-    $yeucau = $_GET['yeucau_ns'];
-  if($yeucau == 1 ){ 
-    $_SESSION['yeucau_ns'] = 1;
-    $tiltle = "Thêm Nha Sĩ";
-    $button = "CREATE";
-    $id_nha_si = "0"; 
-  }
-  else if($yeucau == 2)
-  {
-    $_SESSION['yeucau_ns'] = 2;
-    $tiltle = "Cập Nhật Thông Tin Nha Sĩ ";
-    $id_nha_si = $_GET['id_nha_si'];
-    $ten_nha_si = $_GET['ten_nha_si'];
-    $button = "UPDATE";
-
-  }
-}
+<?php 
+$ten_nha_si = $_GET['ten_nha_si'];
+$ten_dich_vu = $_GET['ten_dich_vu'];
+$id_nha_si = $_GET['id_nha_si'];
+$id_dich_vu = $_GET['id_dich_vu'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +13,7 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title><?php echo $tiltle;?></title>
+    <title>Chỉnh Sửa Tay Nghề</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -158,56 +138,32 @@ else {
                 </nav>
                <!-- ./process/dv_create.php -->
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4 text-gray-800"><?php echo $button; ?></h1> 
-                      <form action="./process/ns_create.php" method="POST" enctype="multipart/form-data">
+                    <h1 class="h3 mb-4 text-gray-800"></h1> 
+                      <form action="./process/edit_epx.php" method="GET" enctype="multipart/form-data">
                           <div class="form-group">
                             <label for="cars">Họ Tên Nha Sĩ</label>
-                            <input type="text" name="hoten" placeholder="name" required="" class="form-control" value='<?php echo $ten_nha_si; ?>' >
-                            <label for="">Giới Tính</label></br>
-                           <input type="radio" id="male" name="gioitinh" value="Nam">
-                            <label for="male">Nam</label><br>
-                            <input type="radio" id="female" name="gioitinh" value="Nữ">
-                            <label for="female">Nữ</label><br>
-                            <small id="emailHelp" class="form-text text-muted">Vui lòng chọn giới tính</small>
+                            <input disabled="" type="text" name="hoten" placeholder="name" required="" class="form-control" value='<?php echo $ten_nha_si; ?>' >                            
                           </div>
                           <div class="form-group">
-                            <label for="">Số Điện Thoại Của Nha Sĩ</label>
-                            <input name="sdt" type="text" class="form-control"  id="exampleInputPassword1" placeholder="phone number">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Trình Độ Nha Sĩ</label>
-                            <input name="trinhdo" value="" type="text" class="form-control" id="exampleInputPassword1" placeholder="trinh do">
-                          </div>
-                          <div class="form-group" >
-                            <label for="">Giới Thiệu Sơ Lược</label>
-                            <input name="gioithieu" value="" type="text" class="form-control" class="form-control" id="exampleInputPassword1" placeholder="" >
-                          </div>
-                          <div class="form-group" hidden="">
-                            <label for="">Giới Thiệu Sơ Lược</label>
-                            <input name="id_nha_si" value='<?php echo $id_nha_si;?>' type="text" class="form-control" class="form-control" id="exampleInputPassword1" placeholder="" >
-                          </div>
-                          <div class="form-group" >
-                            <label for="">Lịch Làm Việc</label></br>
-                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Mon">Thứ 2
-                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Tue">Thứ 3
-                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Wed">Thứ 4 </br>
-                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Thu">Thứ 5
-                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Fri">Thứ 6
-                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Sat">Thứ 7
-                            <input type="checkbox" id="vehicle1" name="lich[]"  value="Sun">Chủ Nhật
-                            
-                           
-                          </div>
-                           <div class="form-group" >
-                            <label for="">Ảnh Đại Diện</label>
-                            <input type="file" name="file" class="form-control">
-                          </div>
+                            <label for="">Tên Dịch Vụ</label>
+                            <input disabled="" name="dichvu" value='<?php echo $ten_dich_vu; ?>' type="text" class="form-control"  id="exampleInputPassword1" placeholder="phone number">
+                          </div>  
 
-                           <div class="form-check" hidden="">
-                            <input type="text" class="form-check-input" id="exampleCheck1" value='<?php echo $id_dich_vu;?>'name="id_dich_vu">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                          <div class="form-group">
+                            <label for="">Kinh Nghiệm</label>
+                            <input name="kinhnghiem" value='' type="text" class="form-control"  id="exampleInputPassword1" placeholder="">
+                          </div>                 
+                           
+                          
+                          <div class="form-check" hidden="" >
+                            <input type="text" class="form-check-input" id="exampleCheck1" value='<?php echo $id_nha_si; ?>'name="id_nha_si" >
+                            
                           </div> 
-                      <button type="submit" class="btn btn-primary"><?php echo $button;?></button>
+                          <div class="form-check" hidden="">
+                            <input type="text" class="form-check-input" id="exampleCheck1" value='<?php echo $id_dich_vu; ?>'name="id_dich_vu" >
+                            
+                          </div>
+                      <button type="submit" class="btn btn-primary">Cập Nhật</button>
                     </form>
 
                 </div>

@@ -25,7 +25,7 @@ require'connect.php';
 		array_push($arraydata, new Lists($row['user'], $row['password'],$row['role']));
 	}
 	$_SESSION['role'] = $arraydata[0]->role;
-	if($_SESSION['role'] == "1"){
+	if(isset($_SESSION['role'])){
 				header("Location: ../index.php");
 		}		
 	else{		

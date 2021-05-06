@@ -1,8 +1,16 @@
 <?php 
 session_start();
 require "API/get_count_don.php";
-if(!isset($_SESSION['role']))
+if(!isset($_SESSION['role'])){
 header("Location: login.php");
+}
+if($_SESSION['role'] ==1 ){
+    $role = "Admin";
+    $xem = "";
+}else {
+    $role = "Sales";
+    $xem = "hidden='''";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,88 +110,7 @@ header("Location: login.php");
             </li>
 
           
-            <!-- <div class="sidebar-heading">
-                Interface
-            </div>
-
-           
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li>
-
-           
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
             
-            <hr class="sidebar-divider">
-
-            
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            
-            <li class="nav-item active">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li> -->
-
             
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -251,120 +178,6 @@ header("Location: login.php");
                         </li>
 
                      
-                        <!-- <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i> -->
-                                <!-- Counter - Alerts -->
-                               <!--  <span class="badge badge-danger badge-counter">3+</span>
-                            </a> -->
-                            <!-- Dropdown - Alerts -->
-                            <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div> -->
-                        <!-- </li> -->
-
-                        <!-- Nav Item - Messages -->
-                        <!-- <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i> -->
-                                <!-- Counter - Messages -->
-                                <!-- <span class="badge badge-danger badge-counter">7</span>
-                            </a> -->
-                            <!-- Dropdown - Messages -->
-                            <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div> -->
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -373,7 +186,7 @@ header("Location: login.php");
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $role; ?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -417,7 +230,8 @@ header("Location: login.php");
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Danh Sách Nha Sĩ</h6>
-                            <a  class="m-0 font-weight-bold text-primary" style="float: right;" href="ns.php?yeucau_ns=1">Thêm Nha Sĩ<a>
+                            <a <?php echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="ns.php?yeucau_ns=1">Thêm Nha Sĩ<a>
+                            <!-- <a <?php //echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="add_epx.php">Thêm Chuyên Môn<a> -->
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -429,7 +243,9 @@ header("Location: login.php");
                                             <th>gioi_tinh_nha_si</th>
                                             <th>phone_nha_si</th>
                                             <th>trinh_do</th>
-                                            <th>ds_don_dat_lich</th>
+                                            <th <?php echo $xem; ?> >tay_nghe</th>
+                                            <th <?php echo $xem; ?> >Cập Nhật</th>
+                                            <th <?php echo $xem; ?> >Xóa</th>
                                             
                                         </tr>
                                     </thead>                                   
@@ -482,7 +298,7 @@ header("Location: login.php");
                 <div class="modal-body">Click "Logout" Để Hoàn Thành Đăng Xuất.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Hủy</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="process/process_logout.php">Logout</a>
                 </div>
             </div>
         </div>
@@ -523,14 +339,10 @@ header("Location: login.php");
                 
                 temp += "<td>"+ u.so_dien_thoai_nha_si +"</td>";
                 temp += "<td>"+ u.trinh_do_nha_si +"</td>";
-                temp += "<td>"+ "<a href='detail_list_nhasi.php?idns="+u.id_nha_si+"' target='_blank'>View</a>" +"</td>";
-                // temp += "<td>"+ u.time_cre +"</td>";
-                // temp += "<td>"+ u.time_yeucau +"</td>";
-                // temp += "<td>"+ u.id_trangthai +"</td>";
+                temp += "<td <?php echo $xem; ?> >"+ "<a href='tay_nghe.php?idns="+u.id_nha_si+"' target='_blank'>View</a>" +"</td>";              
                 
-                // temp += "<td style='text-align:center'>"+"<p><a href='../Process/process_done.php?stt="+u.stt+"&sdt="+u.sdt+"'><button class='btn btn-primary btn-sm'>DONE</button ></a></br><a href='#'></a></p>"+"</td>";
-                // temp += "<td style='text-align:center'>"+"<p><a href='../Process/process_reaccept.php?stt="+u.stt+"&sdt="+u.sdt+"'><button class='btn btn-primary btn-sm'>Re</button></a></br><a href='#'></a></p>"+"</td>";  
-                // temp += "<td style='text-align:center'>"+"<p><a href='#'><button>Update</button></a></br><a href='#'></a></p>"+"</td>";        
+                temp +=  "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='ns.php?yeucau_ns=2&id_nha_si="+u.id_nha_si+"&ten_nha_si="+u.ho_ten_nha_si+"'><button type='button' class='btn btn-outline-info'>X</button></a></p>"+"</td>";
+                temp += "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='./process/ns_create.php?yeucau=3&id_nha_si="+u.id_nha_si+"'><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>"  ;      
 
                 })
             
