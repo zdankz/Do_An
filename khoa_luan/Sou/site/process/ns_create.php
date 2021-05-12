@@ -78,7 +78,7 @@
 	if(isset($_GET['yeucau']) && $_GET['yeucau'] == 3)
 	{
 		$id_nha_si = $_GET['id_nha_si'];		
-		$query_create = "DELETE from nha_si where id_nha_si = '$id_nha_si'";
+		$query_create = "DELETE from nha_si WHERE id_nha_si = '$id_nha_si'";		
 		mysqli_query($connect,$query_create);
 		header("Location: ../list_nha_si.php");
 	}

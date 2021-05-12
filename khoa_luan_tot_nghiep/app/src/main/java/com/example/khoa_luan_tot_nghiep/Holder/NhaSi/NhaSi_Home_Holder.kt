@@ -11,6 +11,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.khoa_luan_tot_nghiep.Entity.NhaSi.NhaSi_Home
 import com.example.khoa_luan_tot_nghiep.Entity.NhaSi.NhaSi_Vande
 import com.example.khoa_luan_tot_nghiep.R
+import com.example.khoa_luan_tot_nghiep.View.NhaSi.Detail_NhaSi
 import com.example.khoa_luan_tot_nghiep.View.NhaSi.Detail_NhaSi_Vande
 import com.example.khoa_luan_tot_nghiep.View.Toge.show_lich
 
@@ -20,8 +21,8 @@ class NhaSi_Home_Holder(v: View): RecyclerView.ViewHolder(v) {
     private val sdt :TextView = v.findViewById(R.id.so_dien_thoai_nha_si_home)
     private val gioitinh :TextView = v.findViewById(R.id.gioi_tinh_nha_si_home)
     private val trinhdo :TextView = v.findViewById(R.id.trinh_do_nha_si_home)
-    private val lich :TextView = v.findViewById(R.id.lich_nha_si_home)
-    private val gioithieu :TextView = v.findViewById(R.id.gioi_thieu_nha_si_home)
+//    private val lich :TextView = v.findViewById(R.id.lich_nha_si_home)
+//    private val gioithieu :TextView = v.findViewById(R.id.gioi_thieu_nha_si_home)
     private  val avata : ImageView = v.findViewById(R.id.anh_avata_nhasi)
     //private val ten :TextView = v.findViewById(R.id.ten_home)
 
@@ -32,14 +33,23 @@ class NhaSi_Home_Holder(v: View): RecyclerView.ViewHolder(v) {
 //        ten_van_de.text = nhasi_vande.tendv
         ten.text = nhasi.ten
         sdt.text = nhasi.sdt
-        gioithieu.text = nhasi.gioithieu
+        //gioithieu.text = nhasi.gioithieu
         gioitinh.text = nhasi.gioitinh
-        lich.text = nhasi.lich
+        //lich.text = nhasi.lich
         trinhdo.text = nhasi.trinhdo
 
-        //clickEvent(nhasi_vande)
+        clickEvent(nhasi)
     }
-//    private fun clickEvent(nhasi : NhaSi_Home) {
-//
-//    }
+    private fun clickEvent(nhasi : NhaSi_Home) {
+        ron.setOnClickListener { val i = Intent(ron.context,Detail_NhaSi::class.java)
+            i.putExtra("hinhanh",nhasi.hinhanh)
+            i.putExtra("ten",nhasi.ten)
+            i.putExtra("sdt",nhasi.sdt)
+            i.putExtra("gioitinh",nhasi.gioitinh)
+            i.putExtra("gioithieu",nhasi.gioithieu)
+            i.putExtra("trinhdo",nhasi.trinhdo)
+            i.putExtra("lich",nhasi.lich)
+            ron.context.startActivity(i)
+        }
+    }
 }

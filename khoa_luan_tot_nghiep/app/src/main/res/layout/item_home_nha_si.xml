@@ -3,21 +3,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:id="@+id/iv_NhaSIHOME"
-    android:layout_height="match_parent"
-    android:background="@drawable/nen_nha_si_home">
+    android:layout_height="wrap_content"
+    >
 
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginBottom="5dp">
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="2dp"
+        android:background="#CFCBCB"
+        android:layout_marginVertical="1dp">
      <LinearLayout
-         android:layout_width="match_parent"
+         android:layout_width="120dp"
          android:gravity="center"
-         android:layout_marginTop="50dp"
          android:orientation="vertical"
-         android:layout_height="250dp">
+         android:layout_height="130dp">
          <LinearLayout
              android:layout_width="wrap_content"
 
@@ -27,149 +27,250 @@
              android:id="@+id/anh_avata_nhasi"
              android:layout_margin="3dp"
                 android:background="@drawable/botron_home_nhasi_2"
-             android:layout_width="160dp"
-             android:layout_height="160dp"/>
+             android:layout_width="90dp"
+             android:layout_height="90dp"/>
          </LinearLayout>
-         <TextView
-             android:layout_marginTop="5dp"
-             android:layout_width="wrap_content"
-             android:textStyle="bold"
-             android:textSize="20sp"
-             android:id="@+id/ten_home"
+<!--         <TextView-->
+<!--             android:layout_marginTop="5dp"-->
+<!--             android:layout_width="wrap_content"-->
+<!--             android:textStyle="bold"-->
+<!--             android:textSize="15sp"-->
+<!--             android:id="@+id/ten_home"-->
 
-             android:textColor="#FFFFFF"
-             android:layout_height="wrap_content"
-             android:text="Trần Minh Tâm"/>
+<!--             android:textColor="#FFFFFF"-->
+<!--             android:layout_height="wrap_content"-->
+<!--             android:text="Trần Minh Tâm"/>-->
 
      </LinearLayout>
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:paddingHorizontal="25dp"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
-            <LinearLayout
-                android:paddingLeft="15dp"
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Số điện thoại:"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:textStyle="bold"
-                    android:paddingLeft="5dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15sp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/so_dien_thoai_nha_si_home"
-                    android:text="0766589630"/>
+            android:paddingTop="20dp"
+            android:orientation="vertical"
+            android:layout_height="120dp">
+                        <LinearLayout
+                            android:paddingLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tên nha sĩ:"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ten_home"
+                                android:text="0766589630"/>
 
-            </LinearLayout>
-            <LinearLayout
-                android:paddingLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gioi Tinh:"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:textStyle="bold"
-                    android:paddingLeft="5dp"
-                    android:textSize="15sp"
-                    android:textColor="#FFFFFF"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/gioi_tinh_nha_si_home"
-                    android:text="Nam"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:paddingLeft="15dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Số điện thoại:"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/so_dien_thoai_nha_si_home"
+                                android:text="0766589630"/>
 
-            </LinearLayout>
-                <LinearLayout
-                    android:paddingLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
-                        android:textSize="15sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Trình độ tay nghề:"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
-                        android:textSize="15sp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/trinh_do_nha_si_home"
-                        android:text="12/12"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:paddingLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
-                        android:textSize="15sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lịch làm việc:"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textStyle="bold"
-                        android:textColor="#FFFFFF"
-                        android:textSize="15sp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/lich_nha_si_home"
+                        </LinearLayout>
+                        <LinearLayout
+                            android:paddingLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gioi Tinh:"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textSize="15sp"
+                                android:textColor="#FFFFFF"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/gioi_tinh_nha_si_home"
+                                android:text="Nam"/>
 
-                        android:text="1ALL DAY"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:paddingLeft="15dp"
+                        </LinearLayout>
+                            <LinearLayout
+                                android:paddingLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Trình độ tay nghề:"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/trinh_do_nha_si_home"
+                                    android:text="12/12"/>
+                            </LinearLayout>
 
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
-                        android:textSize="15sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Giới thiệu:"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:textStyle="bold"
-                        android:textColor="#FFFFFF"
-                        android:textSize="15sp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gioi_thieu_nha_si_home"
-                        android:text="CHI TIET VE BS NEK"/>
-                </LinearLayout>
-            </LinearLayout>
-        </ScrollView>
+
+        </LinearLayout>
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:paddingHorizontal="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_height="match_parent">-->
+<!--            <LinearLayout-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Số điện thoại:"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/so_dien_thoai_nha_si_home"-->
+<!--                    android:text="0766589630"/>-->
+
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Gioi Tinh:"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/gioi_tinh_nha_si_home"-->
+<!--                    android:text="Nam"/>-->
+
+<!--            </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <TextView-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Trình độ tay nghề:"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:paddingLeft="5dp"-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/trinh_do_nha_si_home"-->
+<!--                        android:text="12/12"/>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <TextView-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Lịch làm việc:"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:paddingLeft="5dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/lich_nha_si_home"-->
+
+<!--                        android:text="1ALL DAY"/>-->
+<!--                </LinearLayout>-->
+<!--                <LinearLayout-->
+<!--                    android:paddingLeft="15dp"-->
+
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <TextView-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Giới thiệu:"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="#FFFFFF"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/gioi_thieu_nha_si_home"-->
+<!--                        android:text="CHI TIET VE BS NEK"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+<!--        </ScrollView>-->
     </LinearLayout>
 
 </RelativeLayout>

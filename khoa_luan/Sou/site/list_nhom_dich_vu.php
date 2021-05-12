@@ -48,11 +48,11 @@ if($_SESSION['role'] ==1 ){
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">QUẢN LÝ ĐẶT LỊCH<sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">QUẢN LÝ ĐẶT LỊCH<sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -88,7 +88,7 @@ if($_SESSION['role'] ==1 ){
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -102,7 +102,7 @@ if($_SESSION['role'] ==1 ){
                         
                     </div>
                 </div>
-            </li>
+            </li> -->
 
           
             <hr class="sidebar-divider">
@@ -130,7 +130,7 @@ if($_SESSION['role'] ==1 ){
                     </form>
 
                    
-                    <form
+                    <!-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -141,7 +141,7 @@ if($_SESSION['role'] ==1 ){
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
 
                    
                     <ul class="navbar-nav ml-auto">

@@ -11,32 +11,84 @@
    <LinearLayout
        android:layout_width="match_parent"
        android:orientation="vertical"
+       android:layout_gravity="center"
        android:layout_height="match_parent">
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_margin="2dp"
-        android:layout_height="wrap_content"
-        android:background="#7B1FA2"
-        android:text="CHỌN THEO NHA SĨ"
-        android:textColor="#ffffff"
-        android:id="@+id/theo_nha_si"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#C2185B"
-        android:layout_margin="2dp"
-        android:text="CHỌN THEO VẤN ĐỀ "
-        android:textColor="#ffffff"
-        android:id="@+id/theo_van_de"/>
-       <Button
+       <LinearLayout
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:background="#D32F2F"
-           android:layout_margin="2dp"
-           android:text="THỜI GIAN THÍCH HỢP"
-           android:textColor="#ffffff"
-           android:id="@+id/theo_thoi_gian"/>
+           android:gravity="center"
+           android:background="#FF3700B3"
+           android:layout_height="100dp">
+           <TextView
+               android:gravity="center"
+               android:layout_marginHorizontal="30dp"
+               android:layout_width="match_parent"
+               android:textStyle="italic"
+               android:layout_height="wrap_content"
+               android:textColor="#ffffff"
+               android:text="Chọn theo nha sĩ hoặc dịch vụ để tiếp tục quá trình đặt lịch khám "/>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:background="#FF3700B3"
+           android:orientation="vertical"
+           android:layout_height="200dp">
+           <LinearLayout
+               android:layout_marginHorizontal="3dp"
+               android:layout_marginBottom="2dp"
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:background="#ffffff"
+
+               android:layout_height="200dp">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="160dp"
+               android:id="@+id/theo_nha_si"
+               android:src="@drawable/doctor"/>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:textSize="12sp"
+               android:gravity="center"
+               android:textStyle="bold"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textColor="#FF3700B3"
+               android:text="CHỌN THEO NHA SĨ NHA KHOA"/>
+           </LinearLayout>
+       </LinearLayout>
+       <LinearLayout
+
+
+           android:layout_marginTop="0dp"
+           android:layout_width="match_parent"
+           android:background="#E91E63"
+           android:orientation="vertical"
+           android:layout_height="200dp">
+           <LinearLayout
+               android:layout_marginVertical="3dp"
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:background="#ffffff"
+               android:layout_marginHorizontal="3dp"
+               android:layout_height="200dp">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="160dp"
+                   android:id="@+id/theo_van_de"
+                   android:src="@drawable/ser"/>
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:textSize="12sp"
+                   android:gravity="center"
+                   android:textStyle="bold"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="#E91E63"
+                   android:text="CHỌN THEO DỊCH VỤ NHA KHOA"/>
+           </LinearLayout>
+       </LinearLayout>
+
    </LinearLayout>
 
 

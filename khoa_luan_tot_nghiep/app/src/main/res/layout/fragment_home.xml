@@ -140,7 +140,7 @@
               <ImageView
                   android:layout_gravity="center"
                   android:background="@drawable/ic_tu_thuoc"
-
+                    android:id="@+id/tu_thuoc"
                   android:layout_marginLeft="10dp"
                   android:layout_marginRight="10dp"
                   android:layout_marginTop="25dp"
@@ -176,12 +176,7 @@
                   android:layout_height="wrap_content"
                   android:text="Đang Cập Nhật "/>
 
-
           </LinearLayout>
-
       </LinearLayout>
-
   </RelativeLayout>
-
-
 </FrameLayout>

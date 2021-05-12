@@ -49,7 +49,7 @@ if($_SESSION['role'] ==1 ){
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -92,7 +92,7 @@ if($_SESSION['role'] ==1 ){
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+           <!--  <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -102,13 +102,13 @@ if($_SESSION['role'] ==1 ){
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Chính Sách Quản Lý</h6>
-                        <a class="collapse-item" href="utilities-color.html">Thay Đổi Password</a>
+                        <a class="collapse-item" href="utilities-color.html">Thay Đổi Password</a> -->
                         <!-- <a class="collapse-item" href="utilities-border.html"> Nhóm Dịch Vụ</a>
                         <a class="collapse-item" href="utilities-animation.html">Thêm</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a> -->
-                    </div>
+                    <!-- </div>
                 </div>
-            </li>
+            </li> -->
 
           
             
@@ -232,7 +232,7 @@ if($_SESSION['role'] ==1 ){
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Danh Sách Nha Sĩ</h6>
                             <!-- <a <?php //echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="ns.php?yeucau_ns=1">Thêm Nha Sĩ<a> -->
-                            <a <?php echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="add_epx.php?id_nha_si=<?php echo $id_nha_si?>">Thêm Chuyên Môn<a>
+                            <a <?php echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="add_epx.php?id_nha_si=<?php echo $id_nha_si;?>">Thêm Chuyên Môn <?php echo $id_nha_si;?><a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

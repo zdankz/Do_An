@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".View.Link.tu_thuoc">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#FF3700B3"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width ="26dp"
+            android:id="@+id/back_tu_thuoc"
+            android:background="@drawable/ic_back"
+            android:layout_height ="26dp">
+            
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width ="match_parent"
+            android:layout_height ="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:text="Danh Sách Chữa Răng Miệng Dân Gian"/>
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="#6FD8D4D4">
+
+        <LinearLayout
+            android:layout_marginHorizontal="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cần tây –  Xếp đầu danh sách thực phẩm có lợi cho răng"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hàm lượng chất xơ dồi dào trong loại rau này hỗ trợ làm sạch răng và massage nướu, tăng sự lưu thông rất tốt. Rau cần tây còn có tác dụng loại bỏ vi khuẩn gây sâu răng và loại bỏ các mảng bám trên răng."
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sản phẩm từ sữa"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Những sản phẩm chế biến từ sữa như sữa chua, pho mát rất giàu canxi và phốt pho, có thể giúp trung hòa các axit bảo vệ men răng khỏi bị ăn mòn. Thêm vào đó, sữa được thêm vào danh sách thực phẩm có lợi cho răng bởi canxi là chất điều tiết nước bọt, trung hòa axit trong miệng và giúp tiêu diệt vi khuẩn rất lợi hại."
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Họ cam quýt"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trái cây là nguồn dưỡng chất quý giá đối với sức khỏe của con người, trong đó cam, quýt, bưởi,…có thể bảo vệ men răng hữu hiệu bằng cách tăng lưu thông tuyến nước bọt. Hơn nữa, họ nhà cam quýt chứa rất nhiều nước giúp rửa sạch vi khuẩn gây sâu răng tồn đọng trong miệng."
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thành phần chính trong các loại ngũ cốc nguyên hạt như lúa, lúa mạch, bột yến mạch, bánh mỳ nguyên chất chứa nhiều vitamin B và sắt giúp nướu và răng khỏe mạnh. Chúng ta có thể yên tâm vì thực đơn hàng ngày không thể thiếu ngũ cốc được phải không nào?"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hạt vừng"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nước là nguồn khoáng chất thiết yếu nuôi dưỡng cơ thể. Vì vậy, các bạn hãy nghĩ đến việc cắt giảm lượng đường trong nước ngọt, đồ uống có gas bằng cách uống nước lọc thật nhiều để hàm răng luôn khỏe mạnh."
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nước"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hàm lượng chất xơ dồi dào trong loại rau này hỗ trợ làm sạch răng và massage nướu, tăng sự lưu thông rất tốt. Rau cần tây còn có tác dụng loại bỏ vi khuẩn gây sâu răng và loại bỏ các mảng bám trên răng."
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngũ cốc"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thành phần chính trong các loại ngũ cốc nguyên hạt như lúa, lúa mạch, bột yến mạch, bánh mỳ nguyên chất chứa nhiều vitamin B và sắt giúp nướu và răng khỏe mạnh. Chúng ta có thể yên tâm vì thực đơn hàng ngày không thể thiếu ngũ cốc được phải không nào?"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cá"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Omega – 3 có tác dụng bảo vệ và chống lại chứng viêm và nhiễm trùng, giúp phòng tránh các bệnh về lợi, bảo vệ sức khỏe của răng miệng. Do đó, cá chính là cái tên tiếp theo nằm trong danh sách thực phẩm có lợi cho răng mà chúng ta cần bổ sung mỗi ngày"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngũ cốc"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thành phần chính trong các loại ngũ cốc nguyên hạt như lúa, lúa mạch, bột yến mạch, bánh mỳ nguyên chất chứa nhiều vitamin B và sắt giúp nướu và răng khỏe mạnh. Chúng ta có thể yên tâm vì thực đơn hàng ngày không thể thiếu ngũ cốc được phải không nào?"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

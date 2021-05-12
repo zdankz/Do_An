@@ -33,7 +33,7 @@ class NhaSi_Home : AppCompatActivity() {
 
     }
     private fun initRecyclerView() {
-        rv_nhasi_home.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        rv_nhasi_home.layoutManager = LinearLayoutManager(this)
         rv_nhasi_home.setHasFixedSize(true)
         rv_nhasi_home.adapter = adapter
     }
@@ -53,20 +53,16 @@ class NhaSi_Home : AppCompatActivity() {
 
         override fun onPostExecute(result: String?) {
             super.onPostExecute(result)
-
-            //var id_nhasi : String? = ""
             var ten_nhasi : String? = ""
             var mota_nhasi : String? =""
             var gioi_tinh : String? = ""
             var sdt : String? = ""
             var trinh_do : String? = ""
-          //  var id_nhom: String? =""
             var hinh_anh : String? = ""
             var lich : String? =""
             var jsonArray: JSONArray = JSONArray(result)
             for (vd in 0..jsonArray.length() - 1) {
                 var objectVD: JSONObject = jsonArray.getJSONObject(vd)
-                //id_nhasi = objectVD.getString("id_nha_si")
                 ten_nhasi = objectVD.getString("ho_ten_nha_si")
                 mota_nhasi = objectVD.getString("gioi_thieu_nha_si")
                 trinh_do = objectVD.getString("trinh_do_nha_si")
@@ -74,7 +70,6 @@ class NhaSi_Home : AppCompatActivity() {
                 gioi_tinh  = objectVD.getString("gioi_tinh_nha_si")
                 hinh_anh = objectVD.getString("hinh_anh_nha_si")
                 lich = objectVD.getString("lich_lam_viec_nha_si")
-               // id_nhom = objectVD.getString("id_nhom_dich_vu")
                 nhasis.add(com.example.khoa_luan_tot_nghiep.Entity.NhaSi.NhaSi_Home(ten_nhasi,sdt,gioi_tinh,mota_nhasi,trinh_do,lich,hinh_anh))
 
 

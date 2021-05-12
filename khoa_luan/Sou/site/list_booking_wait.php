@@ -36,7 +36,7 @@ if($_SESSION['role'] ==1 ){
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -301,8 +301,8 @@ if($_SESSION['role'] ==1 ){
                 temp += "<td>"+ u.thoi_gian_dang_ky +"</td>";
                 temp += "<td>"+ u.thoi_gian_du_tru_ket_thuc +"</td>";
                 temp += "<td>"+ u.chi_phi_uoc_tinh +"</td>";
-                temp +=  "<td  style='text-align:center'>"+"<p><a href='process/duyet_don.php?id_don_dat_lich="+u.id_don_dat_lich+"&thoi_gian_dang_ky="+u.thoi_gian_dang_ky+"&thoi_gian_du_tru_ket_thuc="+u.thoi_gian_du_tru_ket_thuc+"'><button type='button' class='btn btn-outline-info'>V</button></a></p>"+"</td>";
-                temp += "<td  style='text-align:center'>"+"<p><a href=''><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>";
+                temp +=  "<td  style='text-align:center'>"+"<p><a href='process/duyet_don.php?yeucau=1&id_don_dat_lich="+u.id_don_dat_lich+"&thoi_gian_dang_ky="+u.thoi_gian_dang_ky+"&thoi_gian_du_tru_ket_thuc="+u.thoi_gian_du_tru_ket_thuc+"'><button type='button' class='btn btn-outline-info'>V</button></a></p>"+"</td>";
+                temp += "<td  style='text-align:center'>"+"<p><a href='process/duyet_don.php?yeucau=2&id_don_dat_lich="+u.id_don_dat_lich+"&thoi_gian_dang_ky="+u.thoi_gian_dang_ky+"&thoi_gian_du_tru_ket_thuc="+u.thoi_gian_du_tru_ket_thuc+"'><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>";
 
 
                 })

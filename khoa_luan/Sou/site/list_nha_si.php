@@ -48,7 +48,7 @@ if($_SESSION['role'] ==1 ){
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -91,7 +91,7 @@ if($_SESSION['role'] ==1 ){
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -100,14 +100,14 @@ if($_SESSION['role'] ==1 ){
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Chính Sách Quản Lý</h6>
-                        <a class="collapse-item" href="utilities-color.html">Thay Đổi Password</a>
+                        <h6 class="collapse-header">Chính Sách Quản Lý</h6> -->
+                       <!--  <a class="collapse-item" href="utilities-color.html">Thay Đổi Password</a> -->
                         <!-- <a class="collapse-item" href="utilities-border.html"> Nhóm Dịch Vụ</a>
                         <a class="collapse-item" href="utilities-animation.html">Thêm</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a> -->
-                    </div>
+                    <!-- </div>
                 </div>
-            </li>
+            </li> -->
 
           
             
@@ -137,7 +137,7 @@ if($_SESSION['role'] ==1 ){
                     </form>
 
                     
-                    <form
+                   <!--  <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -148,7 +148,7 @@ if($_SESSION['role'] ==1 ){
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
 
                     
                     <ul class="navbar-nav ml-auto">
@@ -339,7 +339,7 @@ if($_SESSION['role'] ==1 ){
                 
                 temp += "<td>"+ u.so_dien_thoai_nha_si +"</td>";
                 temp += "<td>"+ u.trinh_do_nha_si +"</td>";
-                temp += "<td <?php echo $xem; ?> >"+ "<a href='tay_nghe.php?idns="+u.id_nha_si+"' target='_blank'>View</a>" +"</td>";              
+                temp += "<td <?php echo $xem; ?> >"+ "<a href='tay_nghe.php?ten_nha_si="+u.ho_ten_nha_si+"&idns="+u.id_nha_si+"' target='_blank'>View</a>" +"</td>";              
                 
                 temp +=  "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='ns.php?yeucau_ns=2&id_nha_si="+u.id_nha_si+"&ten_nha_si="+u.ho_ten_nha_si+"'><button type='button' class='btn btn-outline-info'>X</button></a></p>"+"</td>";
                 temp += "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='./process/ns_create.php?yeucau=3&id_nha_si="+u.id_nha_si+"'><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>"  ;      

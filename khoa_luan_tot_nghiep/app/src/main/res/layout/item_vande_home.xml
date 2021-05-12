@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:layout_margin="5dp"
+    android:layout_margin="3dp"
     android:background="@drawable/lay_out_vande_home"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/iv_VanDe_HOME">
     <ImageView
         android:layout_width="100dp"
-        android:layout_margin="3dp"
+        android:layout_margin="4dp"
         android:background="#ffffff"
         android:layout_height="100dp"
         android:id="@+id/avata_vande_home"/>
@@ -23,6 +23,8 @@
             android:text="Ten ne"/>
         <TextView
             android:layout_width="match_parent"
+            android:text="aa"
+            android:textSize="10sp"
             android:id="@+id/mota_vande_home"
             android:layout_height="wrap_content"/>
 

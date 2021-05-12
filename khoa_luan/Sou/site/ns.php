@@ -64,6 +64,12 @@ else {
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="list_nha_si.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Quay Lại</span></a>
+            </li>
+            <hr class="sidebar-divider">
 
            
             <hr class="sidebar-divider d-none d-md-block">
@@ -91,7 +97,7 @@ else {
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
+                   <!--  <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -102,7 +108,7 @@ else {
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">

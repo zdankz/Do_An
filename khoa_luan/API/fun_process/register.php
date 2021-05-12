@@ -12,6 +12,7 @@
 	$thoi_gian_du_tru_ket_thuc = "".$ngay." ".$thoi_gian_du_tru_ket_thuc."";
 	$chi_phi_uoc_tinh = $_GET['chi_phi_uoc_tinh'];
 	$trangthai = "";
+	$tt = 1;
 	$list =array();
 	$result = array();
 	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
@@ -32,7 +33,7 @@
 			array_push($arraydata, new EIXST($row['id_khach_hang'],$row['so_dien_thoai']));			
 				}
 			$id_khach_hang = $arraydata[0]->id_khach_hang;
-			$query_chen= "INSERT INTO don_dat_lich(id_nha_si,id_khach_hang,id_dich_vu,thoi_gian_tao_don,thoi_gian_dang_ky,thoi_gian_du_tru_ket_thuc,chi_phi_uoc_tinh) values ('$id_nha_si','$id_khach_hang','$id_dich_vu','$thoi_gian_tao_don','$thoi_gian_dang_ky','$thoi_gian_du_tru_ket_thuc','$chi_phi_uoc_tinh')";
+			$query_chen= "INSERT INTO don_dat_lich(id_nha_si,id_khach_hang,id_dich_vu,thoi_gian_tao_don,thoi_gian_dang_ky,thoi_gian_du_tru_ket_thuc,chi_phi_uoc_tinh,id_trang_thai) values ('$id_nha_si','$id_khach_hang','$id_dich_vu','$thoi_gian_tao_don','$thoi_gian_dang_ky','$thoi_gian_du_tru_ket_thuc','$chi_phi_uoc_tinh','$tt')";
 		mysqli_query($connect,$query_chen);
 		array_push($result,new CHECK('THANH CONG'));
 		echo json_encode($result);
@@ -45,8 +46,7 @@
 			array_push($arraydata, new EIXST($row['id_khach_hang'],$row['so_dien_thoai']));	
 				}
 			$id_khach_hang = $arraydata[0]->id_khach_hang;
-			//$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
-			$query_chen= "INSERT INTO don_dat_lich(id_nha_si,id_khach_hang,id_dich_vu,thoi_gian_tao_don,thoi_gian_dang_ky,thoi_gian_du_tru_ket_thuc,chi_phi_uoc_tinh) values ('$id_nha_si','$id_khach_hang','$id_dich_vu','$thoi_gian_tao_don','$thoi_gian_dang_ky','$thoi_gian_du_tru_ket_thuc','$chi_phi_uoc_tinh')";
+			$query_chen= "INSERT INTO don_dat_lich(id_nha_si,id_khach_hang,id_dich_vu,thoi_gian_tao_don,thoi_gian_dang_ky,thoi_gian_du_tru_ket_thuc,chi_phi_uoc_tinh,id_trang_thai) values ('$id_nha_si','$id_khach_hang','$id_dich_vu','$thoi_gian_tao_don','$thoi_gian_dang_ky','$thoi_gian_du_tru_ket_thuc','$chi_phi_uoc_tinh','$tt')";
 			mysqli_query($connect,$query_chen);
 			array_push($result,new CHECK('THANH CONG'));
 		echo json_encode($result);			

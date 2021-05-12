@@ -43,6 +43,10 @@ class Home : Fragment() {
             val inn = Intent(this.context,List_Question::class.java)
             startActivity(inn)
         }
+        tu_thuoc.setOnClickListener {
+            val inn = Intent(this.context,com.example.khoa_luan_tot_nghiep.View.Link.tu_thuoc::class.java)
+            startActivity(inn)
+        }
     }
 
   

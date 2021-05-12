@@ -40,9 +40,9 @@ class Register : AppCompatActivity() {
                     "&id_dich_vu=${i.getStringExtra("id_dv")}&thoi_gian_dang_ky=${i.getStringExtra("bd")}" +
                     "&thoi_gian_du_tru_ket_thuc=${i.getStringExtra("kt")}&chi_phi_uoc_tinh=${i.getStringExtra("chiphi")}&ngay=${ngaydk.text}"
             load_url.text = url.toString()
-           //Getdata().execute(url)
+           Getdata().execute(url)
             var   i = Intent(this,successful::class.java)
-            //startActivity(i)
+            startActivity(i)
         }
 
     }

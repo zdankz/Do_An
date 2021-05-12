@@ -66,7 +66,7 @@ class show_lich : AppCompatActivity() {
         }
     }
     private fun initRecyclerView() {
-        rlRoot_khung_gio.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        rlRoot_khung_gio.layoutManager = LinearLayoutManager(this)
         rlRoot_khung_gio.setHasFixedSize(true)
         rlRoot_khung_gio.adapter = adapter
     }

@@ -33,7 +33,7 @@ class time_VD : AppCompatActivity() {
             initRecyclerView()
     }
         private fun initRecyclerView() {
-        rvAmUser_time.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+        rvAmUser_time.layoutManager = LinearLayoutManager(this)
             rvAmUser_time.setHasFixedSize(true)
             rvAmUser_time.adapter = adapter
     }
