@@ -339,7 +339,7 @@ if($_SESSION['role'] ==1 ){
                 
                 temp += "<td>"+ u.so_dien_thoai_nha_si +"</td>";
                 temp += "<td>"+ u.trinh_do_nha_si +"</td>";
-                temp += "<td <?php echo $xem; ?> >"+ "<a href='tay_nghe.php?ten_nha_si="+u.ho_ten_nha_si+"&idns="+u.id_nha_si+"' target='_blank'>View</a>" +"</td>";              
+                temp += "<td <?php echo $xem; ?> >"+ "<a href='tay_nghe.php?ten_nha_si="+u.ho_ten_nha_si+"&idns="+u.id_nha_si+"' target='_blank'>Trình độ tay nghề</a>" +"</td>";              
                 
                 temp +=  "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='ns.php?yeucau_ns=2&id_nha_si="+u.id_nha_si+"&ten_nha_si="+u.ho_ten_nha_si+"'><button type='button' class='btn btn-outline-info'>X</button></a></p>"+"</td>";
                 temp += "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='./process/ns_create.php?yeucau=3&id_nha_si="+u.id_nha_si+"'><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>"  ;      

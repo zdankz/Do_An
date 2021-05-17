@@ -14,7 +14,7 @@
 	} 
 	else {
 		$id_don_dat_lich = $_GET['id_don_dat_lich'];
-		$query_create = "DELETE from don_dat_lich where id_don_dat_lich = '$id_don_dat_lich' ";
+		$query_create = "UPDATE don_dat_lich set id_trang_thai = 3 where id_don_dat_lich = '$id_don_dat_lich'";
 		mysqli_query($connect,$query_create);
 		header("Location: ../list_booking_wait.php");
 	}

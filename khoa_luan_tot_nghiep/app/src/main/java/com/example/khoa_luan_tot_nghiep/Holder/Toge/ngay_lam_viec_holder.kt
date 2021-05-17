@@ -22,6 +22,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.util.*
 
+
 class ngay_lam_viec_holder (v: View): RecyclerView.ViewHolder(v) {
 
     private val ngay: TextView = v.findViewById(R.id.show_ngay)
@@ -31,10 +32,6 @@ class ngay_lam_viec_holder (v: View): RecyclerView.ViewHolder(v) {
 
     fun bind(ngay_lam_viec:ngay_lam_viec) {
     ngay.text = ngay_lam_viec.ngay
-
-
-
-
         clickEvent(ngay_lam_viec)
     }
 
@@ -53,11 +50,9 @@ class ngay_lam_viec_holder (v: View): RecyclerView.ViewHolder(v) {
             }
             else {
                 Toast.makeText(rlRoon.context,"${ngayhn1} va ${thang1}",Toast.LENGTH_SHORT).show()
-
                 i.putExtra("idns", ngay_lam_viec.idns)
                 i.putExtra("ngay", ngay_lam_viec.ngay)
                 i.putExtra("dichvu", ngay_lam_viec.iddv)
-
                 rlRoon.context.startActivity(i)
             }
         }

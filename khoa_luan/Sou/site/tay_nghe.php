@@ -92,17 +92,17 @@ if($_SESSION['role'] ==1 ){
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-           <!--  <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Tác Vụ</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Chính Sách Quản Lý</h6>
-                        <a class="collapse-item" href="utilities-color.html">Thay Đổi Password</a> -->
+               <!--  <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                        aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Tác Vụ</span>
+                    </a>
+                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Chính Sách Quản Lý</h6>
+                            <a class="collapse-item" href="utilities-color.html">Thay Đổi Password</a> -->
                         <!-- <a class="collapse-item" href="utilities-border.html"> Nhóm Dịch Vụ</a>
                         <a class="collapse-item" href="utilities-animation.html">Thêm</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a> -->
@@ -230,9 +230,9 @@ if($_SESSION['role'] ==1 ){
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Danh Sách Nha Sĩ</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><!-- Danh Sách Nha Sĩ --></h6>
                             <!-- <a <?php //echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="ns.php?yeucau_ns=1">Thêm Nha Sĩ<a> -->
-                            <a <?php echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="add_epx.php?id_nha_si=<?php echo $id_nha_si;?>">Thêm Chuyên Môn <?php echo $id_nha_si;?><a>
+                            <a <?php echo $xem; ?> class="m-0 font-weight-bold text-primary" style="float: right;" href="add_epx.php?id_nha_si=<?php echo $id_nha_si;?>">Thêm Chuyên Môn<a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
