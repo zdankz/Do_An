@@ -3,7 +3,7 @@
 	mysqli_query($connect, "SET NAMES 'utf8'");
 
 	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
-	$query = "SELECT * from nha_si ";
+	$query = "SELECT * from nha_si where nha_si.id_trang_thai = 4 ";
 	$data = mysqli_query($connect,$query);
 	$arraydata = array();
 			while ($row = mysqli_fetch_assoc($data)) {

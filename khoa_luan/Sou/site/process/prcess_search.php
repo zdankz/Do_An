@@ -54,7 +54,7 @@
 	}
 	function rest_data_ns($q){
 	    $connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
-	    $result = mysqli_query($connect,"SELECT * FROM nha_si where id_nha_si like '%$q%' or ho_ten_nha_si like '%$q%' or gioi_tinh_nha_si like '%$q%' or so_dien_thoai_nha_si like  '%$q%' or trinh_do_nha_si like '%$q%' or gioi_thieu_nha_si like '%$q%' or lich_lam_viec_nha_si like '%$q%'");
+	    $result = mysqli_query($connect,"SELECT * FROM nha_si where id_nha_si like '%$q%' or ho_ten_nha_si like '%$q%' or gioi_tinh_nha_si like '%$q%' or so_dien_thoai_nha_si like  '%$q%' or trinh_do_nha_si like '%$q%' or gioi_thieu_nha_si like '%$q%' or lich_lam_viec_nha_si like '%$q%' and id_trang_thai = 4");
 	    return $result;
 	}
 	function rest_data_ndv($q){
@@ -64,7 +64,7 @@
 	}
 	function rest_data_dv($q){
 	    $connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");
-	    $result = mysqli_query($connect,"SELECT * FROM dich_vu where id_dich_vu like '%$q%' or ten_dich_vu like '%$q%' or mota_dich_vu like '%$q%' or chiphi_dich_vu like '%$q%' or thoi_gian_uoc_tinh like '%$q%'");
+	    $result = mysqli_query($connect,"SELECT * FROM dich_vu where id_dich_vu like '%$q%' or ten_dich_vu like '%$q%' or mota_dich_vu like '%$q%' or chiphi_dich_vu like '%$q%' or thoi_gian_uoc_tinh like '%$q%' and id_trang_thai = 4");
 	    return $result;
 	}
 

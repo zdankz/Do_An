@@ -14,11 +14,11 @@
         android:layout_alignParentTop="true"
         android:id="@+id/loc_show_nhasi"
         android:layout_height="wrap_content">
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/check_trinh_do"
-            android:text="Lọc theo trình độ tay nghề"/>
+<!--        <CheckBox-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/check_trinh_do"-->
+<!--            android:text="Lọc theo trình độ tay nghề"/>-->
 
     </LinearLayout>
     <LinearLayout

@@ -1,6 +1,7 @@
 <?php 
 	session_start();	
 	require'connect.php';
+	$trang_thai = 4;
  	mysqli_query($connect, "SET NAMES 'utf8'");
 	if(isset($_SESSION['yeucau_ns']) && $_SESSION['yeucau_ns'] == 1) 
 	{
@@ -33,7 +34,7 @@
 		$trinhdo = $_POST['trinhdo'];			
 		$gioithieu = $_POST['gioithieu'];
 		$lich = implode("-", $_POST['lich']);
-		$query_create = "INSERT into nha_si(ho_ten_nha_si,gioi_tinh_nha_si,so_dien_thoai_nha_si,trinh_do_nha_si,gioi_thieu_nha_si,hinh_anh_nha_si,lich_lam_viec_nha_si) VALUES ('$hoten','$gioitinh','$sdt','$trinhdo','$gioithieu','$path','$lich')";
+		$query_create = "INSERT into nha_si(ho_ten_nha_si,gioi_tinh_nha_si,so_dien_thoai_nha_si,trinh_do_nha_si,gioi_thieu_nha_si,hinh_anh_nha_si,lich_lam_viec_nha_si,id_trang_thai) VALUES ('$hoten','$gioitinh','$sdt','$trinhdo','$gioithieu','$path','$lich','$trang_thai')";
 		mysqli_query($connect,$query_create);
 		unset($_SESSION['yeucau_ns']);		
 		header("Location: ../list_nha_si.php");
@@ -78,7 +79,7 @@
 	if(isset($_GET['yeucau']) && $_GET['yeucau'] == 3)
 	{
 		$id_nha_si = $_GET['id_nha_si'];		
-		$query_create = "DELETE from nha_si WHERE id_nha_si = '$id_nha_si'";		
+		$query_create = "UPDATE nha_si set id_trang_thai = 5 WHERE id_nha_si = '$id_nha_si'";		
 		mysqli_query($connect,$query_create);
 		header("Location: ../list_nha_si.php");
 	}

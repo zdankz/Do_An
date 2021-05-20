@@ -21,12 +21,7 @@ class Lists
 		{			
 			$this->id_nhom_dich_vu = $id_nhom_dich_vu;
 			$this->ten_nhom_dich_vu = $ten_nhom_dich_vu;
-			$this->mota_nhom_dich_vu = $mota_nhom_dich_vu;		
-			// $this->so_dien_thoai_nha_si = $so_dien_thoai_nha_si;
-			// $this->trinh_do_nha_si = $trinh_do_nha_si;	
-			// $this->gioi_thieu_nha_si = $gioi_thieu_nha_si;
-			// $this->hinh_anh_nha_si= $hinh_anh_nha_si;
-			// $this->lich_lam_viec_nha_si=$lich_lam_viec_nha_si;
+			$this->mota_nhom_dich_vu = $mota_nhom_dich_vu;
 			}
 		}
 		

@@ -64,7 +64,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@id/banner_show_lich"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:id="@+id/rlRoot_khung_gio"/>
 <!--    <androidx.recyclerview.widget.RecyclerView-->
 <!--        android:layout_below="@id/rlRoot_khung_gio"-->

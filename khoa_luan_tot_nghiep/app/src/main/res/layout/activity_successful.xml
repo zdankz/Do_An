@@ -20,5 +20,9 @@
         android:layout_height="wrap_content"
         android:text="CHÚC MỪNG BẠN ĐĂNG KÝ THÀNH CÔNG, VUI LÒNG LIÊN HỆ HOTLINE : 0258445445 ĐỂ ĐƯỢC HỖ TRỢ NHANH NHẤT"/>
     
-
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/come_home"
+        android:text="Quay Lại Home "
+        android:layout_height="wrap_content"/>
 </LinearLayout>

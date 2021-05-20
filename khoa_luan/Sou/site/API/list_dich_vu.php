@@ -3,7 +3,7 @@
 	mysqli_query($connect, "SET NAMES 'utf8'");
 
 	$connect = mysqli_connect("localhost", "id15273651_id10563954_testgetjson", "Minhtam@12345@", "id15273651_khoaluan");	
-	$query = "SELECT id_dich_vu,ten_dich_vu,nhom_dich_vu.ten_nhom_dich_vu,mota_dich_vu,hinh_anh_dich_vu,chiphi_dich_vu,thoi_gian_uoc_tinh from dich_vu join nhom_dich_vu on dich_vu.id_nhom_dich_vu = nhom_dich_vu.id_nhom_dich_vu  ";
+	$query = "SELECT id_dich_vu,ten_dich_vu,nhom_dich_vu.ten_nhom_dich_vu,mota_dich_vu,hinh_anh_dich_vu,chiphi_dich_vu,thoi_gian_uoc_tinh from dich_vu join nhom_dich_vu on dich_vu.id_nhom_dich_vu = nhom_dich_vu.id_nhom_dich_vu WHERE dich_vu.id_trang_thai = 4";
 	$data = mysqli_query($connect,$query);
 	$arraydata = array();
 			while ($row = mysqli_fetch_assoc($data)) {

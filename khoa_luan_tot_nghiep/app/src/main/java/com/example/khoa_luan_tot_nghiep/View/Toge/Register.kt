@@ -43,6 +43,7 @@ class Register : AppCompatActivity() {
            Getdata().execute(url)
             var   i = Intent(this,successful::class.java)
             startActivity(i)
+            finish()
         }
 
     }

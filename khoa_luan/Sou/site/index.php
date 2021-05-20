@@ -100,8 +100,8 @@ if($_SESSION['role'] ==1 ){
                         <a class="collapse-item" href="thongke.php">Lọc Và Thống Kê</a>
                         <!-- <a class="collapse-item" href="">Thống Kê Đơn Hàng</a> -->
                         <a class="collapse-item" href="search.php?yc=k_h">Tra Cứu</a>
-                        <a target="blank" class="collapse-item" href="https://apptm.000webhostapp.com/khoa_luan/Sou/site/process/uploads/tien.png">PHÌ</a>
-                        <a target="blank" class="collapse-item" href="blank.html">TEST APP SHEET LINK</a>
+                        <!-- <a target="blank" class="collapse-item" href="https://apptm.000webhostapp.com/khoa_luan/Sou/site/process/uploads/tien.png">PHÌ</a>
+                        <a target="blank" class="collapse-item" href="blank.html">TEST APP SHEET LINK</a> -->
 
                        
                     </div>
@@ -347,7 +347,7 @@ if($_SESSION['role'] ==1 ){
                         <div class="col-lg-6 mb-4">
 
                             <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                                 </div>
@@ -383,7 +383,7 @@ if($_SESSION['role'] ==1 ){
                                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- Color System -->
                             <!-- <div class="row">
@@ -460,19 +460,16 @@ if($_SESSION['role'] ==1 ){
                             <!-- Illustrations -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Truy Cập AppSheet Nha Khoa Việt Hàn</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="text-center">
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                                             src="img/undraw_posting_photo.svg" alt="">
                                     </div>
-                                    <p>Add some quality, svg illustrations to your project courtesy of <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                        constantly updated collection of beautiful svg images that you can use
-                                        completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                                        unDraw &rarr;</a>
+                                    <p>Các vấn đề liên quan đến dịch vụ cũng như việc đăng ký các đơn từ khách hàng đối với <a
+                                            target="_blank" rel="nofollow" href="https://undraw.co/">NHA KHOA VIỆT HÀN</a>, cần được thực hiện ghiêm ngặt và bảo đảm tính công bằng!!!</p>
+                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Truy cập Appsheet &rarr;</a>
                                 </div>
                             </div>
 
