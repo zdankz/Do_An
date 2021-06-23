@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.View
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.khoa_luan_tot_nghiep.Entity.Toge.ngay_lam_viec
 import com.example.khoa_luan_tot_nghiep.Entity.Toge.time
@@ -33,6 +34,8 @@ class time_holder (v: View): RecyclerView.ViewHolder(v) {
                 val inn = Intent(Ron2.context,show_lich::class.java)
                 inn.putExtra("id_ns",time.idns)
                 inn.putExtra("id_dv",time.iddv)
+                Toast.makeText(Ron2.context,"Dịch Vụ Đăng Ký Của Bạn Vượt Quá Thời Gian Làm Việc Của Bác Sĩ, Vui lòng chọn ngày khác. Xin cảm ơn",Toast.LENGTH_LONG).show()
+                //Thread.sleep(5000)
                 Ron2.context.startActivity(inn)
             }else {
                 val i = Intent(Ron2.context,Register::class.java)

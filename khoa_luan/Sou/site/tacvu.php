@@ -286,12 +286,12 @@ else {
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           <!--  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
-                            </a>
+                            </a> -->
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
@@ -324,7 +324,7 @@ else {
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Cập Nhật Nhóm Dịch Vụ</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Thêm Nhóm Dịch Vụ</h1>
                       <form action="./process/ndv_create.php" method="GET">
                           <div class="form-group">
                             <label for="">Tên Nhóm Dịch Vụ</label>

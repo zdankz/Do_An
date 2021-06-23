@@ -468,8 +468,8 @@ if($_SESSION['role'] ==1 ){
                                             src="img/undraw_posting_photo.svg" alt="">
                                     </div>
                                     <p>Các vấn đề liên quan đến dịch vụ cũng như việc đăng ký các đơn từ khách hàng đối với <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">NHA KHOA VIỆT HÀN</a>, cần được thực hiện ghiêm ngặt và bảo đảm tính công bằng!!!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Truy cập Appsheet &rarr;</a>
+                                            target="_blank" rel="nofollow" href="#">NHA KHOA VIỆT HÀN</a>, cần được thực hiện ghiêm ngặt và bảo đảm tính công bằng!!!</p>
+                                    <a target="_blank" rel="nofollow" href="https://www.appsheet.com/start/5aea607b-e18b-47d7-8fbb-4dfb4b083b73#appName=CREATETAM-2323019&sort=%5B%5D&table=L%C3%AA+Ng%E1%BB%8Dc+Th%C3%BAy+Vy&view=Staff">Truy cập Appsheet &rarr;</a>
                                 </div>
                             </div>
 

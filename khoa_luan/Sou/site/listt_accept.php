@@ -196,7 +196,7 @@ if($_SESSION['role'] ==1 ){
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Đơn Đăng Kí</h1>
-                    <p class="mb-4">Các đơn đang chờ phê duyệt<a target="_blank"
+                    <p class="mb-4">Các đơn đã duyệt<a target="_blank"
                             href="">VietHan Dental</a>.</p>
 
                     <!-- DataTales Example -->

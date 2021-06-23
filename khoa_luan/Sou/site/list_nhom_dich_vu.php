@@ -199,7 +199,7 @@ if($_SESSION['role'] ==1 ){
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Danh Sách Nhóm Dịch Vụ</h6>
-                            <a  class="m-0 font-weight-bold text-primary" style="float: right;" href="tacvu.php?yeucau=1" <?php echo $xem; ?> >Thêm Nhóm Dịch Vụ<a>
+                            <a  class="m-0 font-weight-bold text-primary" style="float: right;" href="tacvu.php?yeucau=1" <?php echo $xem; ?>><a> <!--Thêm dịch vu -->
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -209,7 +209,7 @@ if($_SESSION['role'] ==1 ){
                                             <th >id_nhom_dich_vu</th>                                           
                                             <th>ten_nhom_dich_vu</th>                                            
                                             <th>mota_nhom_dich_vu</th>
-                                            <TH <?php echo $xem; ?>>Xóa</TH>
+                                            <!-- <TH <?php// echo $xem; ?>>Xóa</TH> -->
                                             <th <?php echo $xem; ?>>Cập Nhật</th>
                                         </tr>
                                     </thead>                                   
@@ -305,7 +305,7 @@ if($_SESSION['role'] ==1 ){
                 // temp += "<td>"+ u.time_yeucau +"</td>";
                 // temp += "<td>"+ u.id_trangthai +"</td>";
                 
-                temp += "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='./process/ndv_create.php?yeucau=3&id_nhom_dich_vu="+u.id_nhom_dich_vu+"'><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>";
+                //temp += "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='./process/ndv_create.php?yeucau=3&id_nhom_dich_vu="+u.id_nhom_dich_vu+"'><button type='button' class='btn btn-outline-danger'>X</button></a></p>"+"</td>";
                 temp += "<td <?php echo $xem; ?> style='text-align:center'>"+"<p><a href='tacvu.php?yeucau=2&id_nhom_dich_vu="+u.id_nhom_dich_vu+"&ten_nhom_dich_vu="+u.ten_nhom_dich_vu+"&mota_nhom_dich_vu="+u.mota_nhom_dich_vu+"'><button type='button' class='btn btn-outline-info'>X</button></a></p>"+"</td>";
                 // temp += "<td style='text-align:center'>"+"<p><a href='../Process/process_reaccept.php?stt="+u.stt+"&sdt="+u.sdt+"'><button class='btn btn-primary btn-sm'>Re</button></a></br><a href='#'></a></p>"+"</td>";  
                 // temp += "<td style='text-align:center'>"+"<p><a href='#'><button>Update</button></a></br><a href='#'></a></p>"+"</td>";        

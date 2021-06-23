@@ -17,7 +17,10 @@ require'connect.php';
 		}
 	}
 	else{
-		header("Location: ../login.php");
+		echo '<script>
+		alert("Vui lòng nhập chính xác tài khoản");
+		window.location.href="https://apptm.000webhostapp.com/khoa_luan/Sou/site/login.php";
+		</script>';		  
 		die();
 	}
 
@@ -29,6 +32,9 @@ require'connect.php';
 				header("Location: ../index.php");
 		}		
 	else{		
+	}
+	function head(){
+		header("Location: ../login.php");
 	}
 
 class Lists
