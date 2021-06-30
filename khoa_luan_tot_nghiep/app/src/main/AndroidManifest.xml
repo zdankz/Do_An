@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Khoa_luan_tot_nghiep">
-        <activity android:name=".View.Link.tu_thuoc"></activity>
+        <activity android:name=".View.Link.huong_dan"></activity>
+        <activity android:name=".View.Link.tu_thuoc" />
         <activity android:name=".View.Link.successful" />
         <activity android:name=".View.Link.Reply" />
         <activity android:name=".View.Link.List_Question" />
@@ -25,16 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.Toge.Register">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-
-        </activity>
+        <activity android:name=".View.Toge.Register"></activity>
         <activity android:name=".View.Toge.time_VD" />
         <activity android:name=".View.Toge.show_lich" />
         <activity android:name=".View.VanDe.Detail_VanDe_NhaSi" />

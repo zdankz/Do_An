@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.example.khoa_luan_tot_nghiep.Entity.VanDe.Vande_Home
 import com.example.khoa_luan_tot_nghiep.R
 import com.example.khoa_luan_tot_nghiep.View.Link.List_Question
+import com.example.khoa_luan_tot_nghiep.View.Link.huong_dan
 import com.example.khoa_luan_tot_nghiep.View.NhaSi.NhaSi_Home
 import com.example.khoa_luan_tot_nghiep.View.VanDe.VanDe_Home
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -45,6 +46,10 @@ class Home : Fragment() {
         }
         tu_thuoc.setOnClickListener {
             val inn = Intent(this.context,com.example.khoa_luan_tot_nghiep.View.Link.tu_thuoc::class.java)
+            startActivity(inn)
+        }
+        show_huong_dan.setOnClickListener {
+            val inn = Intent(this.context,huong_dan::class.java)
             startActivity(inn)
         }
     }

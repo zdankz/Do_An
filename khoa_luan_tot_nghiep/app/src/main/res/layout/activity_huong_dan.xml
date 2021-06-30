@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Link.huong_dan">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#FF9800"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width ="26dp"
+            android:id="@+id/back_huong_dan"
+            android:background="@drawable/ic_back"
+            android:layout_height ="26dp">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width ="match_parent"
+            android:layout_height ="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:text="Hướng dẫn sử dụng App"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:padding="5px"
+        android:background="#F6EEEE"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:text="Hii. Dưới đây là cách đăng ký lich khám trực tuyến"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bước 1: Chọn BOOKING dưới thanh menu"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Nếu chọn theo Nha Sĩ hãy đặt lịch bắt đầu với nha sĩ bạn muốn đang ký, ngược lại nếu bạn muốn bắt đầu với các dịch vụ "/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bước 3: Chọn Dịch Vụ Hoặc Nha Sĩ Bạn muốn đăng ký"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bước 4: Sau khi chọn đủ nha sĩ và dịch vụ, nhập ngày bạn muốn khám chữa trị và clcick vào tìm kiếm "/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bước 5: Hệ thống sẽ liệt kê các ngày làm việc của bác sĩ bạn đăng ký, vui lòng chọn ngày phù hợp, không chọn các ngày đã qua hoặc cùng ngày bạn sử dụng App để đăng ký"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bước 6: Sau khi chọn ngày, hệ thông sẽ tự đưa ra khoảng thời gian sóm nhất để bạn có thể khám"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bước 7: Chọn thời gian hệ thống đưa ra và điền thông tin cá nhân, sau đó 'BOOKING'"/>
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:src="@drawable/doctor"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

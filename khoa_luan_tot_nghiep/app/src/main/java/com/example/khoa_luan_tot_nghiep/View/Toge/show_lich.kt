@@ -39,7 +39,8 @@ class show_lich : AppCompatActivity() {
             else {
                 var cal1 = Calendar.getInstance()
                 var ngayhn1 = cal1.get(Calendar.DATE).toInt()
-                var thang1 = cal1.get(Calendar.MONTH).toInt()
+                var than1 = cal1.get(Calendar.MONTH).toInt()
+                var thang1 =than1 + 1
                 var nam1 = cal1.get(Calendar.YEAR).toInt()
                 clearListVideo()
                 var nam = input_nam.text.toString()

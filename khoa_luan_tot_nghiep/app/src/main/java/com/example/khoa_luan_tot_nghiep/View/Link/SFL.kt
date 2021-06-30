@@ -19,32 +19,75 @@ class SFL : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_s_f_l)
-        iv_note.alpha = 0f
-        iv_note.animate().setDuration(3000).alpha(1f).withEndAction {
-
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        }
             val cmm = baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             val networkInto = cmm.activeNetworkInfo
 
             if (networkInto != null && networkInto.isConnected) {
                 if (networkInto.type == ConnectivityManager.TYPE_WIFI) {
                     Toast.makeText(this, "co ket noi INTERNET", Toast.LENGTH_LONG).show()
-                    val i = Intent(this, MainActivity::class.java)
-                    startActivity(i)
+                    iv_note.alpha = 0f
+                    iv_note.animate().setDuration(3000).alpha(1f).withEndAction {
+
+
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                        val i = Intent(this, MainActivity::class.java)
+                        startActivity(i)
+                    }
+
+//                    val i = Intent(this, MainActivity::class.java)
+//                    startActivity(i)
 
                 } else if (networkInto.type == ConnectivityManager.TYPE_MOBILE) {
-                    Toast.makeText(this, "co ket noi INTERNET", Toast.LENGTH_LONG).show()
-                    val i = Intent(this, MainActivity::class.java)
-                    startActivity(i)
+                    Toast.makeText(this, "co ket noi INTERNET", Toast.LENGTH_SHORT).show()
+                    iv_note.alpha = 0f
+                    iv_note.animate().setDuration(3000).alpha(1f).withEndAction {
+
+
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                        val i = Intent(this, MainActivity::class.java)
+                        startActivity(i)
+                    }
+//                    val i = Intent(this, MainActivity::class.java)
+//                    startActivity(i)
                 }
 
             } else {
-                Toast.makeText(this, "k co ket noi INTERNET", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "k co ket noi INTERNET", Toast.LENGTH_SHORT).show()
                 val handler = Handler()
                 handler.postDelayed({ finish() }, 3000)
 
 
             }
+//        iv_note.alpha = 0f
+//        iv_note.animate().setDuration(3000).alpha(1f).withEndAction {
+//
+//
+//            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+//            val i = Intent(this, MainActivity::class.java)
+//            startActivity(i)
+//        }
+//            val cmm = baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+//            val networkInto = cmm.activeNetworkInfo
+//
+//            if (networkInto != null && networkInto.isConnected) {
+//                if (networkInto.type == ConnectivityManager.TYPE_WIFI) {
+//                    Toast.makeText(this, "co ket noi INTERNET", Toast.LENGTH_LONG).show()
+//
+//                    val i = Intent(this, MainActivity::class.java)
+//                    startActivity(i)
+//
+//                } else if (networkInto.type == ConnectivityManager.TYPE_MOBILE) {
+//                    Toast.makeText(this, "co ket noi INTERNET", Toast.LENGTH_LONG).show()
+//                    val i = Intent(this, MainActivity::class.java)
+//                    startActivity(i)
+//                }
+//
+//            } else {
+//                Toast.makeText(this, "k co ket noi INTERNET", Toast.LENGTH_LONG).show()
+//                val handler = Handler()
+//                handler.postDelayed({ finish() }, 3000)
+//
+//
+//            }
         }
     }

@@ -28,14 +28,14 @@
               android:background="#FFF6F7FA"
               android:layout_width="110dp"
               android:layout_margin="3dp"
-              android:id="@+id/show_nha_si_howm"
+              android:id="@+id/event_nhasi_home"
               android:layout_height="110dp"
               android:orientation="vertical">
               <ImageView
 
                   android:layout_gravity="center"
                   android:background="@drawable/ic_nha_si"
-                    android:id="@+id/event_nhasi_home"
+
                   android:layout_marginLeft="10dp"
                   android:layout_marginRight="10dp"
                   android:layout_marginTop="25dp"
@@ -50,7 +50,7 @@
 
           </LinearLayout>
           <LinearLayout
-
+              android:id="@+id/danh_sach_dich_vu_"
               android:background="#FFF6F7FA"
               android:layout_width="110dp"
               android:layout_margin="3dp"
@@ -59,7 +59,7 @@
               <ImageView
                   android:layout_gravity="center"
                   android:background="@drawable/ic_service"
-                  android:id="@+id/danh_sach_dich_vu_"
+
                   android:layout_marginLeft="10dp"
                   android:layout_marginRight="10dp"
                   android:layout_marginTop="25dp"
@@ -111,7 +111,7 @@
               android:background="#F6F7FA"
               android:layout_width="110dp"
               android:layout_margin="3dp"
-
+                android:id="@+id/show_huong_dan"
               android:layout_height="110dp"
               android:orientation="vertical">
               <ImageView
@@ -131,7 +131,7 @@
 
           </LinearLayout>
           <LinearLayout
-
+              android:id="@+id/tu_thuoc"
               android:background="#FFF6F7FA"
               android:layout_width="110dp"
               android:layout_margin="3dp"
@@ -140,7 +140,7 @@
               <ImageView
                   android:layout_gravity="center"
                   android:background="@drawable/ic_tu_thuoc"
-                    android:id="@+id/tu_thuoc"
+
                   android:layout_marginLeft="10dp"
                   android:layout_marginRight="10dp"
                   android:layout_marginTop="25dp"

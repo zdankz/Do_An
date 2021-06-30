@@ -31,7 +31,15 @@ class ngay_lam_viec_holder (v: View): RecyclerView.ViewHolder(v) {
 
 
     fun bind(ngay_lam_viec:ngay_lam_viec) {
-    ngay.text = ngay_lam_viec.ngay
+//        var cal1 = Calendar.getInstance()
+//        var ngayhn1 = cal1.get(Calendar.DATE).toInt()
+//        var than1 = cal1.get(Calendar.MONTH).toInt()
+//        var thang1 = than1 + 1
+//        var nam1 = cal1.get(Calendar.YEAR).toInt()
+//        var time1 = cal1.get(Calendar.AM_PM).toInt()
+
+            ngay.text = ngay_lam_viec.ngay
+
         clickEvent(ngay_lam_viec)
     }
 
@@ -39,14 +47,19 @@ class ngay_lam_viec_holder (v: View): RecyclerView.ViewHolder(v) {
         rlRoon.setOnClickListener {
             var cal1 = Calendar.getInstance()
             var ngayhn1 = cal1.get(Calendar.DATE).toInt()
-            var thang1 = cal1.get(Calendar.MONTH).toInt()
+            var than1 = cal1.get(Calendar.MONTH).toInt()
+            var thang1 = than1 + 1
             var nam1 = cal1.get(Calendar.YEAR).toInt()
+            var time1 = cal1.get(Calendar.AM_PM).toInt()
             val i = Intent(rlRoon.context, time_VD::class.java)
             if(ngay_lam_viec.nam.toInt() < nam1 ){
-                Toast.makeText(rlRoon.context,"da qua thoi gian nay",Toast.LENGTH_SHORT).show()
+                Toast.makeText(rlRoon.context,"Đã qua thời gian này ${time1}",Toast.LENGTH_SHORT).show()
             }
-             else if(ngay_lam_viec.nam.toInt() == nam1 && ngay_lam_viec.thang.toInt() == thang1 && ngay_lam_viec.day.toInt() < ngayhn1 ){
-                Toast.makeText(rlRoon.context,"da qua thoi gian nay",Toast.LENGTH_SHORT).show()
+             else if(ngay_lam_viec.nam.toInt() == nam1 && ngay_lam_viec.thang.toInt() == thang1 && ngay_lam_viec.day.toInt() < ngayhn1   ){
+                Toast.makeText(rlRoon.context,"Đã qua thời gian này",Toast.LENGTH_SHORT).show()
+            }
+            else if(ngay_lam_viec.nam.toInt() == nam1 && ngay_lam_viec.thang.toInt() == thang1 && ngay_lam_viec.day.toInt() == ngayhn1   ){
+                Toast.makeText(rlRoon.context,"Vui lòng đặt hẹn trước 1 ngày",Toast.LENGTH_SHORT).show()
             }
             else {
                 Toast.makeText(rlRoon.context,"${ngayhn1} va ${thang1}",Toast.LENGTH_SHORT).show()
